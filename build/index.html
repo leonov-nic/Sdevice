@@ -1,13 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="keywords" content="Печатные платы">
+  <meta name="Description" content="Товар: Печатные платы. Производство и монтаж, поставка комплектующих, блоков и модулей">
+
+  <link rel="preload" href="fonts/roboto-v20-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <title>Печатные платы</title>
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.min.js" async=""></script>
 </head>
+
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <header class="page-header page-header--closed page-header--nojs">
+    <div class="page-header__wrapper">
+
+      <div class="page-header__box-first">
+        <div class="page-header__box-logo">
+          <div class="page-header_icon-img">
+            <svg role="img" class="page-header__icon-logo" width="22" height="22">
+              <use xlink:href="#icon-logo"></use>
+            </svg>
+          </div>
+          <ul class="page-header__list-logo">
+            <li class="page-header__item-logo">
+              <p>Smart Device</p>
+            </li>
+            <li class="page-header__item-logo">
+              <p>умные технологии</p>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="page-header__list">
+          <li class="page-header__item">
+            <a href="mailto:info@sd.ru">info@sd.ru</a>
+          </li>
+          <li class="page-header__item">
+            <a href="tel:+74950005252">+7 (495) 000 52 52</a>
+          </li>
+        </ul>
+
+        <a class="page-header__button" href="#">Заказать звонок</a>
+      </div>
+
+      <div class="page-header__box-second">
+        <div class="page-header__box-heading">
+          <h1 class="page-header__heading">Печатные платы</h1>
+          <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a href="#">Получить бесплатную консультацию</a>
+        </div>
+        <picture>
+          <source type="img/webp" srcset="img/motherboard-desktop@1x.webp 1x, img/motherboard-desktop@2x.webp 2x">
+          <!-- 1х: 705px; 2x: 1410px -->
+          <img src="img/motherboard-desktop@1x.png" srcset="img/motherboard-desktop@2x.png 2x" width="705" height="515" alt="Печатная плата">
+        </picture>
+      </div>
+      <a href="#">Скролл вниз</a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="advantage">
+      <h2 class="visually-hidden">Несколько фактов о нас</h2>
+      <ul class="advantage__list">
+        <li class="advantage__item">
+          <h3>Оперативные сроки</h3>
+          <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки.
+          </p>
+        </li>
+        <li class="advantage__item">
+          <h3>Крупные поставщики</h3>
+          <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+          </p>
+        </li>
+        <li class="advantage__item">
+          <h3>Полная конфиденциальность</h3>
+          <p>По желанию клиента  мы обеспечиваем полную конфеденциальность.
+          </p>
+        </li>
+        <li class="advantage__item">
+          <h3>Персонализация стоимости</h3>
+          <p>Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="contacts" id="contacts">
+    <div class="container">
+    </div>
+  </footer>
+
+
+
+  <script src="js/main.js"></script>
 </body>
 </html>

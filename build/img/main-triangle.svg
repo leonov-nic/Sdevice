@@ -1,9 +1,15 @@
-<svg width="671" height="641" viewBox="0 0 671 641" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.2" d="M626.842 159.584L352.167 635.334L77.4923 159.584L626.842 159.584Z" stroke="white"/>
-<path opacity="0.2" d="M347.148 357.75L186.5 636L25.8523 357.75L347.148 357.75Z" stroke="white"/>
-<circle cx="77" cy="159" r="5" fill="white"/>
-<circle cx="26" cy="358" r="5" fill="white"/>
-<circle cx="187" cy="636" r="5" fill="white"/>
-<circle cx="352" cy="635" r="5" fill="white"/>
-<circle cx="627" cy="159" r="5" fill="white"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="611px" height="487px" viewBox="0 0 611 487" enable-background="new 0 0 611 487" xml:space="preserve">
+<path opacity="0.2" fill="none" stroke="#FFFFFF" enable-background="new    " d="M605.842,5.584l-274.675,475.75L56.492,5.584
+	H605.842z"/>
+<path opacity="0.2" fill="none" stroke="#FFFFFF" enable-background="new    " d="M326.148,203.75L165.5,482L4.853,203.75H326.148z"
+	/>
+<circle fill="#FFFFFF" cx="56" cy="5" r="5"/>
+<circle fill="#FFFFFF" cx="5" cy="204" r="5"/>
+<circle fill="#FFFFFF" cx="166" cy="482" r="5"/>
+<circle fill="#FFFFFF" cx="331" cy="481" r="5"/>
+<circle fill="#FFFFFF" cx="606" cy="5" r="5"/>
 </svg>

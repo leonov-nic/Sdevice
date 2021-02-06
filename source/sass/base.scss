@@ -49,18 +49,18 @@ a {
   clip-path: inset(100%);
 }
 
-// .container {
-//   max-width: 1166px;
-//   margin: 0 auto;
-//   padding: 0 20px;
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
 
-//   @media (max-width: $tablet-width-only) {
-//     max-width: 698px;
-//   }
+  @media (max-width: $tablet-width-only) {
+    // max-width: 698px;
+  }
 
-//   @media (max-width: $mobile-width-only) {
-//     width: 320px;
-//     max-width: 600px;
-//     padding: 0 15px;
-//   }
-// }
+  @media (max-width: $mobile-width-only) {
+    // width: 320px;
+    // max-width: 600px;
+    // padding: 0 15px;
+  }
+}

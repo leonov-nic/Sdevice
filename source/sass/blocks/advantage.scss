@@ -1,0 +1,76 @@
+.advantage {
+  padding-top: 112px;
+}
+
+.advantage__list {
+  @include mapa;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.advantage__item  {
+  position: relative;
+
+  @include mapa;
+
+  width: 49%;
+}
+
+.advantage__item a {
+  display: block;
+  margin: 0;
+
+  padding: 40px 45px 73px;
+  margin-bottom: 30px;
+  border: 1px solid #ebebeb;
+  border-left: 3px solid $cyan;
+  min-height: 299px;
+  transition: 0.5s;
+}
+
+.advantage svg {
+  display: block;
+  color: $cyan;
+  transition: 0.5s;
+}
+
+.advantage a {
+   &:hover {
+
+    h3, svg, p {
+      color: $white;
+      transition: 0.5s;
+    }
+
+    background-color: $cyan;
+    border: 1px solid $cyan;
+    border-left: 3px solid $cyan;
+    transition: 0.5s;
+  }
+}
+
+.advantage h3 {
+  margin: 0;
+  padding-top: 23px;
+
+  @include font(24px, 34px, 400);
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  color: $cyan;
+}
+
+.advantage p {
+  margin: 0;
+  padding-top: 15px;
+
+  @include font;
+
+  color: $gray;
+}
+
+
+
+

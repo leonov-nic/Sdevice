@@ -1,0 +1,226 @@
+.page-header {
+  position: relative;
+  background-color: $dark;
+  background-image: url("../img/main-background-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 878px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/main-background-desktop@2x.jpg");
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0 auto;
+  padding-top: 33px;
+}
+
+.page-header__box-first {
+  width: 1412px;
+  max-width: 1412px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.page-header__box-logo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  width: 202px;
+}
+
+.page-header__list-logo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include mapa;
+  width: 134px;
+}
+
+.page-header p {
+  width: 100%;
+  @include mapa;
+}
+
+.page-header__item-logo:first-child p {
+  font-family: Roboto Condensed;
+
+  @include font(25px, 29px, 400);
+  color: $white;
+}
+
+.page-header__item-logo:nth-child(2) p {
+  @include font(12px, 14px, 500);
+  color: $gray-light;
+}
+
+.page-header__icon-logo {
+  display: block;
+}
+
+.page-header__list {
+  @include mapa;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 441px;
+  margin-left: auto;
+  margin-right: 38px;
+}
+
+.page-header a {
+  display: block;
+
+  @include mapa;
+  color: $white;
+}
+
+.page-header__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__icon-envelope,
+.page-header__icon-phone {
+  display: block;
+  color: $cyan;
+}
+
+.page-header__list a {
+  @include font(16px, 18px, 400);
+  padding-left: 16px;
+}
+
+a.page-header__button {
+  text-transform: uppercase;
+  padding: 14px 27px 14px;
+  border: 1px solid $white;
+
+  border-radius: 5px;
+}
+
+.page-header__box-second {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 173px;
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    right: 170px;
+    top: 250px;
+
+    content: "";
+
+    width: 611px;
+    height: 487px;
+    background: url("../img/main-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+}
+
+.page-header__box-heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  width: 720px;
+  // padding-top: 60px;
+  margin-right: 71px;
+}
+
+h1 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+
+  @include font(80px, 94px, 700);
+
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $white;
+  margin: 0;
+}
+
+.page-header__box-heading p {
+  @include font(22px, 34px, 400);
+
+  position: relative;
+  font-family: PT Mono;
+  color: $white;
+  padding-left: 98px;
+  padding-top: 31px;
+  padding-bottom: 37px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50px;
+
+    content: "";
+
+    width: 66px;
+    height: 2px;
+    background-color: $white;
+  }
+}
+
+.page-header__box-heading a {
+  display: block;
+  @include font(16px, 19px, 400);
+
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.05em;
+  padding: 17px 28px 17px;
+  margin-left: 98px;
+  background-color: $cyan;
+
+  border-radius: 5px;
+}
+
+.page-header__box-second img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 0;
+  width: 705px;
+  height: auto;
+}
+
+.page-header__scroll {
+  position: absolute;
+  left: 30px;
+  bottom: 60px;
+
+  @include mapa;
+  @include font(14px, 16px, 400);
+
+  font-family: PT Mono;
+  color: $white;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+}
+

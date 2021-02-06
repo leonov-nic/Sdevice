@@ -1,0 +1,94 @@
+.services {
+  background-color: $dark;
+  padding-top: 127px;
+  padding-bottom: 127px;
+}
+
+.services h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+
+  @include font(36px, 51px, 400);
+
+  margin: 0;
+  padding-bottom: 47px;
+  color: $white;
+}
+
+.services p {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+
+  @include font(20px, 30px, 400);
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 53px 140px 0 43px;
+  color: $white;
+  transition: 0.5s;
+}
+
+.services img {
+  display: block;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  opacity: 0.2;
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+}
+
+.services__list {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.services__item {
+  position: relative;
+  width: 370px;
+  height: 620px;
+}
+
+.services__item a {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 63px;
+    height: 63px;
+    background-color: $cyan;
+    background-image: url("../img/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 12px 10px;
+    background-position: center center;
+    transition: 0.5s;
+  }
+
+
+  &:hover {
+    p {
+      color: $cyan;
+      transition: 0.5s;
+    }
+
+    img {
+      opacity: 0.4;
+      transition: 0.5s;
+    }
+
+    &::after {
+      background-color: $dark;
+      transition: 0.5s;
+    }
+
+  }
+}
+

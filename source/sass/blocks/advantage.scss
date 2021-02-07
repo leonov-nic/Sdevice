@@ -16,14 +16,14 @@
 
   @include mapa;
 
-  width: 49%;
+  width: 48.7%;
 }
 
 .advantage__item a {
   display: block;
   margin: 0;
 
-  padding: 40px 45px 73px;
+  padding: 40px 40px 70px 43px;
   margin-bottom: 30px;
   border: 1px solid #ebebeb;
   border-left: 3px solid $cyan;
@@ -38,7 +38,7 @@
 }
 
 .advantage a {
-   &:hover {
+  &:hover {
 
     h3, svg, p {
       color: $white;
@@ -54,7 +54,7 @@
 
 .advantage h3 {
   margin: 0;
-  padding-top: 23px;
+  padding-top: 17px;
 
   @include font(24px, 34px, 400);
 

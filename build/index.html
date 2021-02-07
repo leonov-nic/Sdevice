@@ -72,16 +72,16 @@
             <img src="img/motherboard-desktop@1x.png" srcset="img/motherboard-desktop@2x.png 2x" width="705" height="515" alt="Печатная плата">
           </picture>
         </div>
-        <a class="page-header__scroll" href="#">Скролл вниз</a>
+        <a class="page-header__scroll" href="#footer">Скролл вниз</a>
 
       </div>
     </header>
 
     <main>
 
-      <section class="advantage">
+      <section class="advantage container">
         <h2 class="visually-hidden">Несколько фактов о нас</h2>
-        <ul class="advantage__list container">
+        <ul class="advantage__list">
           <li class="advantage__item" id="shipping">
             <a>
               <svg role="img" width="29" height="35">
@@ -133,15 +133,16 @@
               <source type="img/webp" srcset="img/year-desktop@1x.webp 1x, img/year-desktop@2x.webp 2x">
 
               <!-- 1х: 317px; 2x: 634px -->
-              <img src="img/year-desktop@1x.png" srcset="img/year-desktop@2x.png 2x" width="317" height="220" alt="Год 2005">
+              <img src="img/year-desktop@1x.png" srcset="img/year-desktop@2x.png 2x" width="323" height="223" alt="Год 2005">
             </picture>
           </div>
 
           <div class="company__text-box">
             <h2>О компании</h2>
-            <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-            <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-            <p></p>
+            <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+            </p>
+            <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+            </p>
             <a href="#" aria-label="О компании">подробнее</a>
           </div>
 
@@ -225,9 +226,11 @@
               <input type="text" name="letter" id="letter" value="Ваш вопрос" required="">
               <button class="questions__form-button" type="submit" aria-label="отправить форму">Задать вопрос</button>
               <div class="questions__field-box">
-                <span class="questions__radio-indicator"></span>
-                <input type="checkbox" name="check" id="check" value="Ваш вопрос" required="">
-                <label class="" for="check">Я согласен на обработку  персональных данных</label>
+                <label class="" for="check">
+                  <input class="visually-hidden" type="checkbox" name="check" id="check" required="">
+                  <span class="questions__checkbox-indicator"></span>
+                  Я согласен на обработку  персональных данных
+                </label>
               </div>
             </form>
           </div>
@@ -237,19 +240,19 @@
 
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer" id="footer">
       <div class="page-footer__wrapper">
 
         <div class="page-footer__box-first">
           <div class="page-footer__box-logo">
             <div class="page-footer_icon-img">
               <svg role="img" class="page-footer__icon-logo" width="52" height="52">
-                <use xlink:href="#icon-logo"></use>
+                <use xlink:href="#icon-circuit"></use>
               </svg>
             </div>
             <ul class="page-footer__list-logo">
               <li class="page-footer__item-logo">
-                <p>Smart Device</p>
+                <p>Service Device</p>
               </li>
               <li class="page-footer__item-logo">
                 <p>умные технологии</p>
@@ -257,7 +260,7 @@
             </ul>
           </div>
 
-          <p>1999-2018 SD Service Devices</p>
+          <p class="page-footer__service">1999-2018 SD Service Devices</p>
 
           <div class="page-footer__box-social">
             <svg role="img" class="page-footer__icon-social" width="52" height="52">
@@ -273,7 +276,7 @@
         </div>
 
         <nav class="page-footer__navigation">
-          <p>Разделы сайта</p>
+          <b>Разделы сайта</b>
           <ul class="page-footer__list">
             <li class="page-footer__item">
               <a href="#company">О компании</a>
@@ -300,24 +303,25 @@
         </nav>
 
         <div class="page-footer__box-ofis">
-          <ul class="page-footer__list">
-            <li class="page-footer__item">
+          <b>Наш офис</b>
+          <ul class="page-footer__list page-footer__list--box-ofis">
+            <li class="page-footer__item page-footer__item--box-ofis">
               <p>г. Мытищи, Олимпийский проспект, д.10</p>
             </li>
-            <li class="page-footer__item">
+            <li class="page-footer__item page-footer__item--box-ofis">
               <a href="tel:+74955894050">+7 (495) 589-40-50</a>
             </li>
-            <li class="page-footer__item">
+            <li class="page-footer__item page-footer__item--box-ofis">
               <a href="tel:+79250038767">+7 (925) 003-87-67</a>
             </li>
-            <li class="page-footer__item">
+            <li class="page-footer__item page-footer__item--box-ofis">
               <a href="tel:+792692608079">+7 (926) 926-080-79</a>
             </li>
           </ul>
         </div>
-
+      </div>
         <div class="page-footer__box-confidential">
-          <ul class="page-footer__lis-confidentialt">
+          <ul class="page-footer__list-confidentialt">
             <li class="page-footer__item-confidential">
               <p>Все права защищены</p>
             </li>
@@ -333,8 +337,32 @@
           </ul>
         </div>
 
-      </div>
+
     </footer>
+
+
+    <div class="popup">
+      <button class="popup__close" type="button" aria-label="закрыть форму"></button>
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+
+      <form class="popup__form" action="echo/htmlacademy.ru" method="POST" enctype="multipart/form-data">
+        <label class="visually-hidden" for="name-popup">Ваше имя</label>
+        <input type="text" name="name" id="name-popup" pattern="[A-Za-zА-Яа-яЁё]{2,}" value="Имя" required="">
+        <label class="visually-hidden" for="phone-popup">Ваш телефон</label>
+        <input type="tel" name="phone" id="phone-popup" pattern="([\W][7]|[8])([0-9]{10})" value="Телефон" required="">
+        <label class="visually-hidden" for="letter-popup">Ваш вопрос</label>
+        <input type="text" name="letter" id="letter-popup" value="Ваш вопрос" required="">
+        <button class="popup__form-button" type="submit" aria-label="отправить форму">Задать вопрос</button>
+        <div class="popup__field-box">
+          <label class="" for="checktwo">
+            <input class="visually-hidden" type="checkbox" name="checktwo" id="checktwo" required="">
+            <span class="popup__checkbox-indicator"></span>
+            Я согласен на обработку  персональных данных
+          </label>
+        </div>
+      </form>
+    </div>
 
     <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 

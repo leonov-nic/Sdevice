@@ -1,71 +1,48 @@
-.questions {
+.popup {
+  position: fixed;
+  left: calc(50% - 245px);
+  top: calc(50% - 245px);
+  z-index: 100;
+  display: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 490px;
+  padding: 35px 45px;
   background-color: $cyan;
-  padding-top: 92px;
-  padding-bottom: 114px;
-
-  background-image: url("../img/main-triangle.svg");
-  background-repeat: no-repeat;
-  background-position: calc(50% - 456px) 93px;
 }
 
-.questions__wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  background-image: url("../img/plane-desktop@1x.png");
-  background-repeat: no-repeat;
-  background-size: 511px 288px;
-  background-position: -9px 68px;
-
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/plane-desktop@2x.png");
-  }
-}
-
-.questions__form-box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-self: flex-end;
-  width: 574px;
-  margin-left: auto;
-}
-
-.questions__form {
+.popup__form-box__form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 570px;
-  margin-left: auto;
 }
 
-.questions h2 {
+.popup h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
 
   @include font(36px, 51px, 400);
 
   margin: 0;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
   color: $white;
 }
 
-.questions p {
+.popup p {
   @include font(16px, 22px, 400);
   color: $white;
   margin: 0;
   padding-bottom: 50px;
-  padding-left: 3px;
 }
 
-.questions input {
+.popup input {
   @include mapa;
   @include font(16px, 22px, 400);
 
   position: relative;
   color: $white;
   padding: 14px 16px 15px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   width: 270px;
   border: none;
   background-color: rgba($white, 0.1);
@@ -78,23 +55,35 @@
   }
 }
 
-.questions input[name="letter"] {
+.popup input[name="letter"] {
   width: 100%;
-  min-height: 154px;
+  min-height: 104px;
 
   display: flex;
-  padding-bottom: 120px;
+  padding-bottom: 70px;
 }
 
-.questions button {
+.popup__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 17px;
+  height: 17px;
+  border: none;
+  background: none;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.popup__form button {
   font-family: "Roboto Condensed", "Arial", sans-serif;
 
   @include mapa;
-  @include font(14px, 16px, 400);
 
-  letter-spacing: 0.05em;
+  width: 100%;
   text-transform: uppercase;
-  padding: 15px 78px 13px;
+  padding: 15px 78px 12px;
   border-radius: 5px;
   border: 1px solid $white;
   background-color: $cyan;
@@ -114,15 +103,15 @@
   }
 }
 
-.questions input[type="checkbox"] {
+.popup input[type="checkbox"] {
   width: 0;
 }
 
-.questions__checkbox-indicator {
+.popup__checkbox-indicator {
    &::after {
     position: absolute;
-    left: 6px;
-    top: 9px;
+    left: 2px;
+    top: 42px;
     content: "";
     width: 16px;
     height: 16px;
@@ -131,8 +120,9 @@
 
   &::before {
     position: absolute;
-    left: 6px;
-    top: 13px;
+    left: 5px;
+    top: 46px;
+    z-index: 200;
     content: "";
     width: 10px;
     height: 7px;
@@ -141,13 +131,13 @@
   }
 }
 
-.questions__field-box input[type="checkbox"]:checked + .questions__checkbox-indicator {
+.popup__field-box input[type="checkbox"]:checked + .popup__checkbox-indicator {
   &::before {
     background-image: url("../img/icon-tick.svg");
   }
 }
 
-.questions__field-box input[type="checkbox"]:focus + .questions__checkbox-indicator {
+.popup__field-box input[type="checkbox"]:focus + .popup__checkbox-indicator {
   &::after {
     outline: none;
     box-shadow: 0px 0px 4px 6px rgba($white, 0.3);
@@ -155,22 +145,23 @@
   }
 }
 
-.questions__field-box input[type="checkbox"]:disabled + .questions__checkbox-indicator {
+.popup__field-box input[type="checkbox"]:disabled + .popup__checkbox-indicator {
   &::before {
     background-image: none;
   }
 }
 
-.questions__field-box {
+.popup__field-box {
   position: relative;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 
-  width: 270px;
+  width: 90%;
+  padding-top: 35px;
 }
 
-.questions label {
+.popup label {
   @include font(14px, 16px, 400);
 
   display: flex;

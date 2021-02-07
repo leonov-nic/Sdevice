@@ -1,6 +1,6 @@
 .services {
   background-color: $dark;
-  padding-top: 127px;
+  padding-top: 88px;
   padding-bottom: 127px;
 }
 
@@ -10,7 +10,7 @@
   @include font(36px, 51px, 400);
 
   margin: 0;
-  padding-bottom: 47px;
+  padding-bottom: 53px;
   color: $white;
 }
 
@@ -21,18 +21,18 @@
   width: 100%;
   display: block;
   margin: 0;
-  padding: 53px 140px 0 43px;
+  padding: 50px 155px 0 43px;
   color: $white;
   transition: 0.5s;
 }
 
 .services img {
   display: block;
-  padding: 0;
   position: absolute;
   top: 0;
   left: 0;
   margin: 0;
+  padding: 0;
   opacity: 0.2;
   width: 100%;
   height: auto;
@@ -41,6 +41,7 @@
 
 .services__list {
   padding: 0;
+  margin: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

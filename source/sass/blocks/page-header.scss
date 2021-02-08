@@ -10,6 +10,10 @@
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/main-background-desktop@2x.jpg");
   }
+
+  @media (max-width: $tablet-width-only) {
+    min-height: 696px;
+  }
 }
 
 .page-header__wrapper {
@@ -22,7 +26,7 @@
   margin: 0 auto;
   padding-top: 31px;
 
-    &::before {
+  &::before {
     position: absolute;
     z-index: 1;
     right: 267px;
@@ -36,6 +40,35 @@
     background-repeat: no-repeat;
     background-position: center top;
   }
+
+  @media (max-width: 1600px) {
+    &::before {
+      right: 167px;
+      top: 270px;
+      width: 565px;
+      height: 450px;
+      background-size: cover;
+      transition: 0.5s;
+    }
+  }
+
+  @media (max-width: 1450px) {
+    &::before {
+      right: 100px;
+      top: 270px;
+      transition: 0.5s;
+    }
+  }
+
+  @media (max-width: $tablet-width-only) {
+    &::before {
+      right: -168px;
+      top: 92px;
+      width: 480px;
+      height: 385px;
+
+    }
+  }
 }
 
 .page-header__box-first {
@@ -48,6 +81,19 @@
   align-items: center;
   align-content: center;
   margin: 0 auto;
+  transition: 0.5s;
+
+  @media (max-width: 1450px) {
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: 0.5s;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    max-width: 720px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .page-header__box-logo {
@@ -96,9 +142,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  width: 441px;
+  width: 431px;
   margin-left: auto;
-  margin-right: 50px;
+  margin-right: 48px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 83px;
+    margin-right: 0;
+  }
 }
 
 .page-header a {
@@ -108,10 +159,24 @@
   color: $white;
 }
 
-.page-header__item {
+.page-header__item a {
   display: flex;
   justify-content: space-between;
+}
+
+.page-header__item p {
   padding-left: 10px;
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.page-header__item {
+  &:hover svg {
+    color: $white;
+    transition: 0.5s;
+  }
 }
 
 .page-header__icon-envelope,
@@ -121,13 +186,31 @@
 }
 
 .page-header__icon-envelope {
- margin-top: 3px;
- margin-right: 10px;
+  margin-right: 11px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 25px;
+    height: auto
+  }
+}
+
+.page-header__icon-phone {
+  margin-right: 4px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 24px;
+    height: auto;
+    margin-right: 0;
+  }
 }
 
 .page-header__list a {
   @include font(16px, 18px, 400);
-  padding-left: 13px;
+
+  &:hover {
+    color: $cyan;
+    transition: 0.5s;
+  }
 }
 
 a.page-header__button {
@@ -148,6 +231,10 @@ a.page-header__button {
     opacity: 0.2;
     transition: 0.2s;
   }
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
 }
 
 .page-header__box-second {
@@ -159,6 +246,13 @@ a.page-header__button {
   flex-wrap: wrap;
   margin: 0 auto;
   padding-top: 172px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 720px;
+    max-width: 720px;
+    padding-top: 42px;
+    justify-content: flex-start;
+  }
 }
 
 .page-header__box-heading {
@@ -169,6 +263,21 @@ a.page-header__button {
 
   width: 720px;
   margin-right: 60px;
+  transition: 0.5s;
+
+  @media (max-width: 1450px) {
+    padding-left: 30px;
+    margin-right: 30px;
+    transition: 0.5s;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    width: 100%;
+    max-width: 485px;
+    padding-left: 62px;
+    padding-top: 16px;
+    margin-right: 0;
+  }
 }
 
 h1 {
@@ -181,6 +290,10 @@ h1 {
   color: $white;
   margin: 0;
   padding-top: 58px;
+
+  @media (max-width: $tablet-width-only) {
+    @include font(60px, 70px, 700);
+  }
 }
 
 .page-header__box-heading p {
@@ -195,8 +308,8 @@ h1 {
 
   &::before {
     position: absolute;
-    left: 0;
-    top: 46px;
+    left: 3px;
+    top: 45px;
 
     content: "";
 
@@ -204,12 +317,26 @@ h1 {
     height: 2px;
     background-color: $white;
   }
+
+  @media (max-width: $tablet-width-only) {
+    @include font(18px, 28px, 400);
+
+    padding-top: 29px;
+    padding-left: 52px;
+    padding-bottom: 55px;
+
+    &::before {
+      width: 33px;
+    }
+  }
 }
 
 .page-header__box-heading a {
   display: block;
-  @include font(16px, 19px, 400);
 
+  @include font(16px, 19px, 700);
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.01em;
@@ -228,6 +355,13 @@ h1 {
     opacity: 0.2;
     transition: 0.2s;
   }
+
+  @media (max-width: $tablet-width-only) {
+    min-width: 379px;
+    padding: 17px 31px 19px;
+    margin-left: auto;
+    margin-right: -7px;
+  }
 }
 
 .page-header__box-second img {
@@ -238,6 +372,27 @@ h1 {
   margin-right: -75px;
   width: 705px;
   height: auto;
+  transition: 0.5s;
+
+  @media (max-width: 1600px) {
+    width: 600px;
+    height: auto;
+    margin-right: 0;
+    transition: 0.5s;
+  }
+  @media (max-width: 1450px) {
+    width: 575px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    // position: absolute;
+    // left: calc(50% + 100px);
+    // top: 0;
+    width: 465px;
+    padding-right: 0;
+    margin-right: -270px;
+  }
 }
 
 .page-header__scroll {
@@ -252,5 +407,11 @@ h1 {
   color: $white;
   opacity: 0.5;
   transform: rotate(-90deg);
+  transition: 0.5s;
+
+  &:hover {
+    color: $cyan;
+    transition: 0.5s;
+  }
 }
 

@@ -1,5 +1,9 @@
 .advantage {
   padding-top: 112px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 55px;
+  }
 }
 
 .advantage__list {
@@ -17,6 +21,11 @@
   @include mapa;
 
   width: 48.7%;
+
+  @media (max-width: $tablet-width-only) {
+    width: 48%;
+    min-height: 307px;
+  }
 }
 
 .advantage__item a {
@@ -29,6 +38,27 @@
   border-left: 3px solid $cyan;
   min-height: 299px;
   transition: 0.5s;
+
+  @media (max-width: $tablet-width-only) {
+    padding: 22px 25px 20px 24px;
+    min-height: 307px;
+  }
+}
+
+.advantage__item:nth-last-child(-n+2) {
+  @media (max-width: $tablet-width-only) {
+    min-height: 232px;
+
+    a {
+      min-height: 232px;
+    }
+  }
+}
+
+.advantage__item--padding a {
+  @media (max-width: $tablet-width-only) {
+    padding-right: 10px;
+  }
 }
 
 .advantage svg {
@@ -60,15 +90,22 @@
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: $cyan;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 9px
+  }
 }
 
 .advantage p {
-  margin: 0;
-  padding-top: 15px;
-
   @include font;
 
+  margin: 0;
+  padding-top: 15px;
   color: $gray;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 9px;
+  }
 }
 
 

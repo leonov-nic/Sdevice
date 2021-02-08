@@ -2,6 +2,11 @@
   background-color: $dark;
   padding-top: 88px;
   padding-bottom: 127px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 50px;
+    padding-bottom: 32px;
+  }
 }
 
 .services h2 {
@@ -12,6 +17,13 @@
   margin: 0;
   padding-bottom: 53px;
   color: $white;
+
+  @media (max-width: $tablet-width-only) {
+    @include font(32px, 45px, 400);
+
+    padding-right: 100px;
+    padding-bottom: 50px;
+  }
 }
 
 .services p {
@@ -24,6 +36,11 @@
   padding: 50px 155px 0 43px;
   color: $white;
   transition: 0.5s;
+
+  @media (max-width: $tablet-width-only) {
+    padding: 40px 155px 0 45px;
+    width: 55%;
+  }
 }
 
 .services img {
@@ -51,6 +68,12 @@
   position: relative;
   width: 370px;
   height: 620px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 715px;
+    height: 256px;
+    margin-bottom: 46px;
+  }
 }
 
 .services__item a {

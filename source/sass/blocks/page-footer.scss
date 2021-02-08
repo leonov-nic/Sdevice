@@ -63,9 +63,16 @@ p.page-footer__service {
 }
 
 .page-footer__box-social svg {
+  display: block;
   width: 26px;
   height: auto;
   color: $social;
+  transition: 0.5s;
+
+  &:hover {
+    color: $cyan;
+    transition: 0.5s;
+  }
 }
 
 .page-footer__navigation {
@@ -108,10 +115,17 @@ p.page-footer__service {
 
 .page-footer__navigation a,
 .page-footer__box-ofis a {
+  display: block;
   @include font(15px, 25px, 400);
 
   color: $dark;
   opacity: 0.5;
+  transition: 0.5s;
+
+  &:hover {
+    color: $cyan;
+    transition: 0.5s;
+  }
 }
 
 .page-footer__box-ofis {

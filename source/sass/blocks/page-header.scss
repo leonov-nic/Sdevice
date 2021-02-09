@@ -14,6 +14,10 @@
   @media (max-width: $tablet-width-only) {
     min-height: 696px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 647px;
+  }
 }
 
 .page-header__wrapper {
@@ -25,11 +29,12 @@
   align-content: flex-start;
   margin: 0 auto;
   padding-top: 31px;
+  overflow-x: hidden;
 
   &::before {
     position: absolute;
     z-index: 1;
-    right: 267px;
+    right: 250px;
     top: 270px;
 
     content: "";
@@ -42,6 +47,9 @@
   }
 
   @media (max-width: 1600px) {
+    padding-left: 20px;
+    padding-right: 20px;
+
     &::before {
       right: 167px;
       top: 270px;
@@ -62,11 +70,24 @@
 
   @media (max-width: $tablet-width-only) {
     &::before {
-      right: -168px;
+      right: -172px;
       top: 92px;
-      width: 480px;
+      width: 484px;
       height: 385px;
+    }
+  }
 
+  @media (max-width: $mobile-width-only) {
+    padding-top: 17px;
+    padding-left: 17px;
+    padding-right: 17px;
+
+    &::before {
+      right: 0;
+      top: 92px;
+      width: 484px;
+      width: 280px;
+      height: 385px;
     }
   }
 }
@@ -94,6 +115,12 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 100%;
+    // padding-left: 17px;
+    // padding-right: 17px;
+  }
 }
 
 .page-header__box-logo {
@@ -103,6 +130,10 @@
   align-items: center;
   align-content: center;
   width: 202px;
+
+  @media (max-width: $mobile-width-only) {
+    width: auto;
+  }
 }
 
 .page-header__list-logo {
@@ -112,6 +143,10 @@
 
   @include mapa;
   width: 134px;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .page-header p {
@@ -127,7 +162,9 @@
 }
 
 .page-header__item-logo:nth-child(2) p {
-  @include font(12px, 14px, 500);
+  @include font(12px, 13px, 500);
+
+  letter-spacing: -0.035em;
   color: $gray-light;
 }
 
@@ -142,13 +179,17 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  width: 431px;
+  width: 434px;
   margin-left: auto;
-  margin-right: 48px;
+  margin-right: 43px;
 
   @media (max-width: $tablet-width-only) {
     width: 83px;
     margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+
   }
 }
 
@@ -201,6 +242,7 @@
     width: 24px;
     height: auto;
     margin-right: 0;
+    margin-top: -2px;
   }
 }
 
@@ -214,9 +256,11 @@
 }
 
 a.page-header__button {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  @include font(14px, 16px, 700);
   text-transform: uppercase;
-  letter-spacing: -0.05em;
-  padding: 12px 24px 11px;
+  letter-spacing: 0.05em;
+  padding: 14px 27px 13px;
   border: 1px solid $white;
   border-radius: 5px;
   transition: 0.5s;
@@ -248,12 +292,18 @@ a.page-header__button {
   padding-top: 172px;
 
   @media (max-width: $tablet-width-only) {
-    width: 720px;
-    max-width: 720px;
+    // width: 720px;
+    // max-width: 720px;
     padding-top: 42px;
     justify-content: flex-start;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    max-width: 100%;
+  }
 }
+
 
 .page-header__box-heading {
   display: flex;
@@ -272,11 +322,22 @@ a.page-header__button {
   }
 
   @media (max-width: $tablet-width-only) {
-    width: 100%;
-    max-width: 485px;
+    width: 485px;
+    // width: 100%;
+    max-width: 720px;
+    // max-width: 485px;
     padding-left: 62px;
     padding-top: 16px;
     margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-top: 120px;
   }
 }
 
@@ -294,16 +355,21 @@ h1 {
   @media (max-width: $tablet-width-only) {
     @include font(60px, 70px, 700);
   }
+
+  @media (max-width: $mobile-width-only) {
+    @include font(40px, 47px, 700);
+  }
 }
 
 .page-header__box-heading p {
   @include font(22px, 34px, 400);
 
   position: relative;
-  font-family: PT Mono;
+  letter-spacing: -0.01em;
+  font-family: "PT Mono", "Arial", sans-serif;
   color: $white;
-  padding-left: 94px;
-  padding-top: 30px;
+  padding-left: 98px;
+  padding-top: 28px;
   padding-bottom: 44px;
 
   &::before {
@@ -323,28 +389,42 @@ h1 {
 
     padding-top: 29px;
     padding-left: 52px;
-    padding-bottom: 55px;
+    padding-bottom: 56px;
 
     &::before {
       width: 33px;
     }
   }
+
+  @media (max-width: $mobile-width-only) {
+    @include font(16px, 25px, 400);
+  }
 }
 
 .page-header__box-heading a {
   display: block;
+  position: relative;
+  z-index: 3;
 
   @include font(16px, 19px, 700);
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.03em;
   padding: 17px 47px 17px;
   margin-left: 94px;
   background-color: $cyan;
   border-radius: 5px;
   transition: 0.5s;
+
+  span {
+    display: none;
+  }
+
+  span.page-header__desktop-value {
+    display: block;
+  }
 
   &:hover {
     background-color: darken($cyan, 20%);
@@ -358,18 +438,31 @@ h1 {
 
   @media (max-width: $tablet-width-only) {
     min-width: 379px;
-    padding: 17px 31px 19px;
+    padding: 16px 31px 22px;
     margin-left: auto;
     margin-right: -7px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    min-width: 100%;
+    max-width: 500px;
+    padding: 17px 33px 22px;
+    margin-right: 0;
+
+    span {
+      display: block;
+    }
+
+    span.page-header__desktop-value {
+      display: none;
+    }
   }
 }
 
 .page-header__box-second img {
-  position: relative;
-  z-index: 2;
   display: block;
   margin: 0;
-  margin-right: -75px;
+  margin-right: -77px;
   width: 705px;
   height: auto;
   transition: 0.5s;
@@ -386,19 +479,24 @@ h1 {
   }
 
   @media (max-width: $tablet-width-only) {
-    // position: absolute;
-    // left: calc(50% + 100px);
-    // top: 0;
     width: 465px;
     padding-right: 0;
     margin-right: -270px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 301px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 15px;
   }
 }
 
 .page-header__scroll {
   position: absolute;
-  left: calc(50% - 745px);
-  bottom: 22px;
+  left: calc(50% - 743px);
+  bottom: 20px;
 
   @include mapa;
   @include font(14px, 16px, 400);

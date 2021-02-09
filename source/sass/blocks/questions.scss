@@ -1,6 +1,6 @@
 .questions {
   background-color: $cyan;
-  padding-top: 92px;
+  padding-top: 90px;
   padding-bottom: 114px;
 
   background-image: url("../img/main-triangle.svg");
@@ -22,7 +22,7 @@
   background-image: url("../img/plane-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 511px 288px;
-  background-position: -9px 68px;
+  background-position: left 70px;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/plane-desktop@2x.png");
@@ -40,12 +40,19 @@
   align-self: flex-end;
   width: 574px;
   margin-left: auto;
+  margin-right: 9px;
 
   @media (max-width: $tablet-width-only) {
     margin-left: 0;
+    margin-right: 0;
     width: 100%;
     padding-left: 65px;
     padding-right: 65px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -68,17 +75,24 @@
   @include font(36px, 51px, 400);
 
   margin: 0;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
   color: $white;
 
   @media (max-width: $tablet-width-only) {
     @include font(32px, 45px, 400);
     padding-bottom: 17px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    @include font(28px, 40px, 400);
+    padding-bottom: 37px;
+  }
 }
 
 .questions p {
   @include font(16px, 22px, 400);
+
+  letter-spacing: -0.024em;
   color: $white;
   margin: 0;
   padding-bottom: 50px;
@@ -112,12 +126,17 @@
     padding: 14px 19px 18px;
     width: 280px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+  }
 }
 
 .questions input[name="letter"] {
   width: 100%;
   min-height: 154px;
   display: flex;
+  padding-top: 12px;
   padding-bottom: 120px;
 
   @media (max-width: $tablet-width-only) {
@@ -129,11 +148,12 @@
   font-family: "Roboto Condensed", "Arial", sans-serif;
 
   @include mapa;
-  @include font(14px, 16px, 400);
+  @include font(14px, 16px, 700);
 
-  letter-spacing: 0.05em;
+  letter-spacing: 0.055em;
   text-transform: uppercase;
-  padding: 15px 78px 13px;
+  padding: 12px 79px 15px;
+  margin-top: 3px;
   border-radius: 5px;
   border: 1px solid $white;
   background-color: $cyan;
@@ -153,8 +173,12 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    padding: 15px 86px 13px;
-    margin-top: 5px;
+    padding: 15px 85px 13px;
+    margin-top: 6px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
   }
 }
 
@@ -165,8 +189,8 @@
 .questions__checkbox-indicator {
    &::after {
     position: absolute;
-    left: 6px;
-    top: 9px;
+    left: 8px;
+    top: 11px;
     content: "";
     width: 16px;
     height: 16px;
@@ -175,8 +199,8 @@
 
   &::before {
     position: absolute;
-    left: 10px;
-    top: 13px;
+    left: 11px;
+    top: 16px;
     content: "";
     width: 10px;
     height: 7px;
@@ -186,10 +210,12 @@
 
   @media (max-width: $tablet-width-only) {
     &::after {
+      left: 6px;
       top: 14px;
     }
 
     &::before {
+      left: 9px;
       top: 18px;
     }
   }
@@ -220,21 +246,26 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-
   width: 270px;
 
   @media (max-width: $tablet-width-only) {
     width: 275px;
+    margin-top: 2px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
   }
 }
 
 .questions label {
   @include font(14px, 16px, 400);
 
+  letter-spacing: 0.03em;;
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding-top: 3px;
   padding-left: 40px;
   color: rgba($white, 0.8);
 

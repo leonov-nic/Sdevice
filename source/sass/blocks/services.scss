@@ -11,6 +11,7 @@
 
 .services h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  letter-spacing: 0.003em;
 
   @include font(36px, 51px, 400);
 
@@ -24,22 +25,35 @@
     padding-right: 100px;
     padding-bottom: 50px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    @include font(28px, 40px, 400);
+
+    padding-right: 0;
+    padding-bottom: 37px;
+  }
 }
 
 .services p {
   font-family: "Roboto Condensed", "Arial", sans-serif;
 
   @include font(20px, 30px, 400);
+
   width: 100%;
   display: block;
   margin: 0;
-  padding: 50px 155px 0 43px;
+  padding: 49px 155px 0 45px;
   color: $white;
   transition: 0.5s;
 
   @media (max-width: $tablet-width-only) {
-    padding: 40px 155px 0 45px;
+    padding: 40px 185px 0 45px;
     width: 55%;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 33px 105px 0 33px;
+    width: 100%;
   }
 }
 
@@ -67,12 +81,18 @@
 .services__item {
   position: relative;
   width: 370px;
-  height: 620px;
+  min-height: 620px;
 
   @media (max-width: $tablet-width-only) {
     width: 715px;
-    height: 256px;
+    min-height: 256px;
     margin-bottom: 46px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 290px;
+    min-height: 256px;
+    margin-bottom: 30px;
   }
 }
 
@@ -92,7 +112,7 @@
     background-image: url("../img/arrow-right.svg");
     background-repeat: no-repeat;
     background-size: 12px 10px;
-    background-position: center center;
+    background-position: 29px center;
     transition: 0.5s;
   }
 

@@ -49,6 +49,10 @@ a {
   clip-path: inset(100%);
 }
 
+.questions .container {
+  max-width: 1220px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -60,8 +64,8 @@ a {
   }
 
   @media (max-width: $mobile-width-only) {
-    // width: 320px;
-    // max-width: 600px;
-    // padding: 0 15px;
+    width: 320px;
+    max-width: 400px;
+    padding: 0 14px;
   }
 }

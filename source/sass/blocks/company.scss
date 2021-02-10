@@ -6,6 +6,11 @@
     padding-top: 18px;
     padding-bottom: 77px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 32px;
+    padding-bottom: 65px;
+  }
 }
 
 .company__wrapper {
@@ -62,6 +67,11 @@
   @media (max-width: $tablet-width-only) {
     @include font(32px, 45px, 400);
   }
+
+  @media (max-width: $mobile-width-only) {
+    @include font(28px, 40px, 400);
+    padding-bottom: 22px;
+  }
 }
 
 .company p {
@@ -77,6 +87,10 @@
 
   @media (max-width: $tablet-width-only) {
     padding-right: 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 39px;
   }
 }
 
@@ -122,6 +136,11 @@
 
   @media (max-width: $tablet-width-only) {
     margin-top: 21px;
+    padding: 13px 27px 14px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: -10px;
     padding: 13px 27px 14px;
   }
 }

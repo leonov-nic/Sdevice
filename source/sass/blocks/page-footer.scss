@@ -15,7 +15,7 @@
 
   @media (max-width: $mobile-width-only) {
     &::before {
-      top: 210px;
+      top: 260px;
     }
   }
 }
@@ -27,17 +27,30 @@
   max-width: 1412px;
   margin: 0 auto;
   padding-top: 65px;
+  transition: 0.5s;
+
+  @media (max-width: 1450px) {
+    padding-left: 50px;
+    padding-right: 50px;
+    transition: 0.5s;
+  }
+
+  @media (max-width: 1300px) {
+    justify-content: flex-start;
+  }
 
   @media (max-width: $tablet-width-only) {
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
     max-width: 720px;
     padding-top: 21px;
   }
 
   @media (max-width: $mobile-width-only) {
     max-width: 100%;
+    width: 100%;
     padding-top: 46px;
-    padding-right: 15px;
-    padding-left: 15px;
   }
 }
 
@@ -56,6 +69,8 @@
   @media (max-width: $mobile-width-only) {
     justify-content: center;
     padding-bottom: 54px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -101,6 +116,11 @@ p.page-footer__service {
     padding-top: 16px;
     letter-spacing: 0.02em;
   }
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 0;
+    padding-top: 26px;
+  }
 }
 
 .page-footer__item-logo:first-child p {
@@ -131,6 +151,10 @@ p.page-footer__service {
   @media (max-width: $tablet-width-only) {
     padding-top: 11px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 31px;
+  }
 }
 
 .page-footer__box-social svg {
@@ -147,6 +171,7 @@ p.page-footer__service {
 }
 
 .page-footer__navigation {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -158,8 +183,12 @@ p.page-footer__service {
   }
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 37px;
+    padding-top: 32px;
     width: 100%;
+    padding-bottom: 17px;
+    border-bottom: 1px solid rgba($black, 0.2);
+        padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -237,22 +266,36 @@ p.page-footer__service {
   @media (max-width: $tablet-width-only) {
     letter-spacing: 0.001em;
   }
+
+  @media (max-width: $mobile-width-only) {
+    line-height: 24px;
+    padding-bottom: 1px;
+  }
 }
 
 .page-footer__box-ofis {
+  position: relative;
   width: 355px;
   padding-left: 24px;
+  transition: 0.5s;
+
+  @media (max-width: 1300px) {
+    padding-left: 0;
+    padding-top: 50px;
+    transition: 0.5s;
+  }
 
   @media (max-width: $tablet-width-only) {
+    padding-left: 24px;
     padding-top: 37px;
     width: 51.4%;
   }
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 37px;
+    padding-top: 27px;
     width: 100%;
-    padding-left: 0;
-    padding-right: 30px;
+    padding-right: 15px;
+    padding-left: 17px;
   }
 }
 
@@ -261,6 +304,7 @@ p.page-footer__service {
 
   @media (max-width: $mobile-width-only) {
     width: 100%;
+    padding-top: 8px;
   }
 }
 
@@ -274,14 +318,22 @@ p.page-footer__service {
   padding: 12px 0;
   margin-top: 45px;
   letter-spacing: 0.015em;
+  transition: 0.5s;
+
+  @media (max-width: 1450px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 
   @media (max-width: $tablet-width-only) {
+    padding-left: 0;
+    padding-right: 0;
     margin-top: 19px;
     padding: 21px 0;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-top: 19px;
+    margin-top: 9px;
     padding: 21px 15px;
   }
 }
@@ -306,15 +358,35 @@ p.page-footer__service {
 }
 
 .page-footer__item-confidential {
+  transition: 0.5s;
+}
+
+.page-footer__item-confidential {
   &:first-child {
     padding-right: 76px;
   }
   &:nth-child(2) {
     padding-right: 144px;
+    @media (max-width: 1140px) {
+      padding-right: 50px;
+    }
+  }
+  &:nth-child(3) {
+    @media (max-width: 1080px) {
+      padding-right: 50px;
+    }
+    @media (max-width: $mobile-width-only) {
+      padding-right: 0;
+    }
   }
   &:last-child {
     margin-left: auto;
-
+    @media (max-width: 1070px) {
+      margin-left: 0;
+    }
+    @media (max-width: $tablet-width-only) {
+      margin-left: auto;
+    }
     @media (max-width: $mobile-width-only) {
       margin-left: 0;
     }
@@ -327,7 +399,8 @@ p.page-footer__service {
   opacity: 0.5;
 
   @media (max-width: $mobile-width-only) {
-     padding: 10px 0;
+     padding: 8px 0;
+     margin-bottom: 3px;
   }
 }
 
@@ -335,4 +408,20 @@ p.page-footer__service {
   @media (max-width: $tablet-width-only) {
     display: none;
   }
+}
+
+.page-footer_buttons {
+  display: none;
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+    position: absolute;
+    padding-right: 15px;
+    top: 30px;
+    right: 0;
+  }
+}
+
+.page-footer_buttons svg {
+  display: block;
 }

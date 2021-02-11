@@ -43,10 +43,15 @@
   padding-bottom: 53px;
   color: $white;
 
+  @media (max-width: 950px) {
+    padding-right: 0;
+  }
+
   @media (max-width: $tablet-width-only) {
     @include font(32px, 45px, 400);
 
-    padding-right: 100px;
+    padding-right: 120px;
+    padding-left: 25px;
     padding-bottom: 50px;
   }
 
@@ -76,7 +81,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    padding: 40px 185px 0 45px;
+    padding: 38px 185px 0 42px;
     width: 55%;
   }
 
@@ -105,6 +110,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (max-width: $tablet-width-only) {
+    justify-content: center;
+  }
 
   @media (max-width: $mobile-width-only) {
     justify-content: center;

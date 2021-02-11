@@ -91,6 +91,7 @@
   @media (max-width: $tablet-width-only) {
     @include font(32px, 45px, 400);
     padding-bottom: 17px;
+    width: 100%;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -140,6 +141,7 @@
   @media (max-width: $tablet-width-only) {
     padding: 14px 19px 18px;
     width: 280px;
+    width: 47.5%;
   }
 
   @media (max-width: $mobile-width-only) {

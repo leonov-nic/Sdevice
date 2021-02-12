@@ -352,6 +352,19 @@ body {
   font-family: "PT Mono", "Arial", sans-serif;
   color: #666666; }
 
+.body-black {
+  position: relative; }
+  .body-black:after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    content: "";
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); }
+
 *,
 *::before,
 *::after {
@@ -1314,6 +1327,11 @@ a.page-header__scroll {
       width: 290px;
       min-height: 256px;
       margin-bottom: 30px; } }
+  .services__item:hover {
+    -webkit-box-shadow: 0 0 2px 2px #00b2ff;
+            box-shadow: 0 0 2px 2px #00b2ff;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
 
 .services__item a {
   display: block;
@@ -1489,6 +1507,19 @@ a.page-header__scroll {
             box-shadow: 0px 0px 4px 6px rgba(255, 255, 255, 0.3);
     -webkit-transition: 0.5s;
     transition: 0.5s; }
+  .questions input::-webkit-input-placeholder {
+    color: #ffffff; }
+  .questions input::-moz-placeholder {
+    color: #ffffff; }
+  .questions input:-ms-input-placeholder {
+    color: #ffffff; }
+  .questions input::-ms-input-placeholder {
+    color: #ffffff; }
+  .questions input::placeholder {
+    color: #ffffff; }
+  .questions input:focus:invalid {
+    -webkit-box-shadow: 0 0 3px 3px red;
+            box-shadow: 0 0 3px 3px red; }
   @media (max-width: 1023px) {
     .questions input {
       padding: 14px 19px 18px;
@@ -1553,7 +1584,10 @@ a.page-header__scroll {
       margin-top: 4px; } }
 
 .questions input[type="checkbox"] {
-  width: 0; }
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: 0; }
 
 .questions__checkbox-indicator::after {
   position: absolute;
@@ -1566,8 +1600,8 @@ a.page-header__scroll {
 
 .questions__checkbox-indicator::before {
   position: absolute;
-  left: 11px;
-  top: 16px;
+  left: 12px;
+  top: 15px;
   content: "";
   width: 10px;
   height: 7px;
@@ -2177,6 +2211,16 @@ p.page-footer__service {
             box-shadow: 0px 0px 4px 6px rgba(255, 255, 255, 0.3);
     -webkit-transition: 0.5s;
     transition: 0.5s; }
+  .popup input::-webkit-input-placeholder {
+    color: #ffffff; }
+  .popup input::-moz-placeholder {
+    color: #ffffff; }
+  .popup input:-ms-input-placeholder {
+    color: #ffffff; }
+  .popup input::-ms-input-placeholder {
+    color: #ffffff; }
+  .popup input::placeholder {
+    color: #ffffff; }
 
 .popup input[name="letter"] {
   width: 100%;

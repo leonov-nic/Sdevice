@@ -10,7 +10,7 @@
     <link rel="preload" href="fonts/roboto-v20-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
 
     <title>Печатные платы</title>
     <link rel="stylesheet" href="css/style.min.css">
@@ -68,7 +68,7 @@
           <div class="page-header__box-heading">
             <h1 class="page-header__heading">Печатные платы</h1>
             <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a href="#"><span class="page-header__desktop-value">Получить бесплатную консультацию</span><span>бесплатная консультация</span></a>
+            <a href="#questions"><span class="page-header__desktop-value">Получить бесплатную консультацию</span><span>бесплатная консультация</span></a>
           </div>
           <picture>
             <source type="img/webp" srcset="img/motherboard-desktop@1x.webp 1x, img/motherboard-desktop@2x.webp 2x">
@@ -79,12 +79,12 @@
 
 
       </div>
-      <a class="page-header__scroll" href="#footer">Скролл вниз</a>
+      <a class="page-header__scroll" href="#advantage">Скролл вниз</a>
     </header>
 
     <main>
 
-      <section class="advantage container">
+      <section class="advantage container" id="advantage">
         <h2 class="visually-hidden">Несколько фактов о нас</h2>
         <ul class="advantage__list">
           <li class="advantage__item" id="shipping">
@@ -215,7 +215,7 @@
         </div>
       </section>
 
-      <section class="questions">
+      <section class="questions" id="questions">
         <div class="questions__wrapper container">
 
           <div class="questions__form-box">
@@ -224,11 +224,11 @@
 
             <form class="questions__form" action="echo/htmlacademy.ru" method="POST" enctype="multipart/form-data">
               <label class="visually-hidden" for="name">Ваше имя</label>
-              <input type="text" name="name" id="name" pattern="[A-Za-zА-Яа-яЁё]{2,}" value="Имя" required="">
+              <input type="text" name="name" id="name" pattern="[A-Za-zА-Яа-яЁё]{2,}" placeholder="Имя" required="">
               <label class="visually-hidden" for="phone">Ваш телефон</label>
-              <input type="tel" name="phone" id="phone" pattern="([\W][7]|[8])([0-9]{10})" value="Телефон" required="">
+              <input type="tel" name="phone" id="phone" pattern="([\W][7])([\W][0-9]{3}[\W])([0-9]{3}[\W])([0-9]{2}[\W])([0-9]{2})" placeholder="Телефон" required="">
               <label class="visually-hidden" for="letter">Ваш вопрос</label>
-              <input type="text" name="letter" id="letter" value="Ваш вопрос" required="">
+              <input type="text" name="letter" id="letter" placeholder="Ваш вопрос" required="">
               <button class="questions__form-button" type="submit" aria-label="отправить форму">Задать вопрос</button>
               <div class="questions__field-box">
                 <label class="" for="check">
@@ -378,11 +378,11 @@
 
       <form class="popup__form" action="echo/htmlacademy.ru" method="POST" enctype="multipart/form-data">
         <label class="visually-hidden" for="name-popup">Ваше имя</label>
-        <input type="text" name="name" id="name-popup" pattern="[A-Za-zА-Яа-яЁё]{2,}" value="Имя" required="">
+        <input type="text" name="name" id="name-popup" pattern="[A-Za-zА-Яа-яЁё]{2,}" placeholder="Имя" required="">
         <label class="visually-hidden" for="phone-popup">Ваш телефон</label>
-        <input type="tel" name="phone" id="phone-popup" pattern="([\W][7]|[8])([0-9]{10})" value="Телефон" required="">
+        <input type="tel" name="phone" id="phone-popup" pattern="([\W][7]|[8])([0-9]{10})" placeholder="Телефон" required="">
         <label class="visually-hidden" for="letter-popup">Ваш вопрос</label>
-        <input type="text" name="letter" id="letter-popup" value="Ваш вопрос" required="">
+        <input type="text" name="letter" id="letter-popup" placeholder="Ваш вопрос" required="">
         <button class="popup__form-button" type="submit" aria-label="отправить форму">Задать вопрос</button>
         <div class="popup__field-box">
           <label class="" for="checktwo">

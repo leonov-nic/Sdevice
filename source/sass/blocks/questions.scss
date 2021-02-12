@@ -138,6 +138,14 @@
     transition: 0.5s;
   }
 
+  &::placeholder {
+    color: $white;
+  }
+
+  &:focus:invalid {
+    box-shadow: 0 0 3px 3px red;
+  }
+
   @media (max-width: $tablet-width-only) {
     padding: 14px 19px 18px;
     width: 280px;
@@ -208,6 +216,9 @@
 
 .questions input[type="checkbox"] {
   width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .questions__checkbox-indicator {
@@ -223,8 +234,8 @@
 
   &::before {
     position: absolute;
-    left: 11px;
-    top: 16px;
+    left: 12px;
+    top: 15px;
     content: "";
     width: 10px;
     height: 7px;

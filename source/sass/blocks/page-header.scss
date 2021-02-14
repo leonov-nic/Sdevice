@@ -13,6 +13,8 @@
 
   @media (max-width: $tablet-width-only) {
     min-height: 696px;
+    background-size: 1910px 878px;
+    background-position: -250px -150px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -84,7 +86,6 @@
     &::before {
       right: 0;
       top: 70px;
-      width: 480px;
       width: 280px;
       height: 366px;
       background-position: calc(50% + 218px) top;
@@ -151,6 +152,7 @@
 
 .page-header p {
   width: 100%;
+
   @include mapa;
 }
 
@@ -236,7 +238,7 @@
 
   @media (max-width: $tablet-width-only) {
     width: 25px;
-    height: auto
+    height: auto;
   }
 }
 
@@ -262,6 +264,7 @@
 
 a.page-header__button {
   font-family: "Roboto Condensed", "Arial", sans-serif;
+
   @include font(14px, 16px, 700);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -347,10 +350,17 @@ a.page-header__button {
   @media (max-width: $mobile-width-only) {
     position: relative;
     z-index: 4;
+    width: 400px;
+    max-width: 400px;
+    padding-left: 0;
+    padding-top: 120px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 400px) {
     width: 100%;
     max-width: 100%;
     padding-left: 0;
-    padding-top: 120px;
   }
 }
 
@@ -462,15 +472,15 @@ h1 {
   }
 
   @media (max-width: $tablet-width-only) {
-    min-width: 379px;
+    width: 379px;
     padding: 16px 31px 22px;
     margin-left: auto;
     margin-right: -7px;
   }
 
   @media (max-width: $mobile-width-only) {
-    min-width: 100%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 400px;
     padding: 17px 33px 21px;
     margin-right: 0;
 
@@ -524,8 +534,16 @@ h1 {
     width: 301px;
     position: absolute;
     z-index: 2;
-    left: 10px;
+    left: 290px;
     top: 38px;
+  }
+
+  @media (max-width: 650px) {
+    left: 120px;
+  }
+
+  @media (max-width: 450px) {
+    left: 10px;
   }
 }
 
@@ -537,7 +555,7 @@ a.page-header__scroll {
   @include mapa;
   @include font(14px, 16px, 400);
 
-  font-family: PT Mono;
+  font-family: "PT Mono", "Arial", sans-serif;
   color: $white;
   opacity: 0.5;
   transform: rotate(-90deg);

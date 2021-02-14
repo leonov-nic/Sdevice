@@ -96,6 +96,7 @@
 
 .page-footer p {
   width: 100%;
+
   @include mapa;
   color: rgba($dark, 0.5);
 
@@ -113,6 +114,7 @@ p.page-footer__service {
 
   @media (max-width: $tablet-width-only) {
     display: block;
+
     @include font(13px, 24px, 400);
     padding-left: 18px;
     padding-top: 16px;
@@ -193,6 +195,7 @@ p.page-footer__service {
     padding-right: 15px;
     padding-left: 50px;
   }
+
   @media (max-width: 550px) {
     padding-left: 15px;
   }
@@ -344,8 +347,6 @@ p.page-footer__service {
   }
 
   @media (max-width: $tablet-width-only) {
-    padding-left: 0;
-    padding-right: 0;
     margin-top: 19px;
     padding: 21px 0;
   }
@@ -377,37 +378,44 @@ p.page-footer__service {
 
 .page-footer__item-confidential {
   transition: 0.5s;
-}
 
-.page-footer__item-confidential {
   &:first-child {
     padding-right: 76px;
   }
+
   &:nth-child(2) {
     padding-right: 144px;
+
     @media (max-width: 1140px) {
       padding-right: 50px;
     }
   }
+
   &:nth-child(3) {
     @media (max-width: 1080px) {
       padding-right: 50px;
     }
+
     @media (max-width: $mobile-width-only) {
       padding-right: 23px;
     }
+
     @media (max-width: 400px) {
       padding-right: 0;
     }
   }
+
   &:last-child {
     margin-left: auto;
+
     @media (max-width: 1070px) {
       margin-left: 0;
     }
+
     @media (max-width: $tablet-width-only) {
       margin-left: auto;
     }
+
     @media (max-width: $mobile-width-only) {
       margin-left: 0;
     }
@@ -420,8 +428,8 @@ p.page-footer__service {
   opacity: 0.5;
 
   @media (max-width: $mobile-width-only) {
-     padding: 8px 0;
-     margin-bottom: 3px;
+    padding: 8px 0;
+    margin-bottom: 3px;
   }
 }
 
@@ -436,7 +444,6 @@ p.page-footer__service {
 }
 
 @media (max-width: $mobile-width-only) {
-
   .page-footer__toggles svg {
     display: block;
   }

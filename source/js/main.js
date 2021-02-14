@@ -23,21 +23,21 @@
   }
   var isStorageSupport = "true";
 
-  try {
-    storage.name = localStorage.getItem("name");
-    storage.phone = localStorage.getItem("phone");
-    storage.questions = localStorage.getItem("questions");
-  }
-  catch (err) {
-    isStorageSupport = "false";
-  }
-
   var setStorage = function () {
+    try {
+      storage.name = localStorage.getItem("name");
+      storage.phone = localStorage.getItem("phone");
+      storage.questions = localStorage.getItem("questions");
+    }
+    catch (err) {
+      isStorageSupport = "false";
+    }
+
     if (storage) {
-      popupName.focus();
       popupName.value = storage.name;
       popupPhone.value = storage.phone;
       popupQuestions.value = storage.questions;
+      popupName.focus();
     } else {
       popupName.focus();
     }
@@ -72,7 +72,7 @@
     var element = document.createElement("div");
     element.className = "body-black";
     document.body.appendChild(element);
-    popup.style.display = "block";
+    popup.classList.add("popup-show");
     html.style.overflow = "hidden";
 
     element.addEventListener("click", closePopup);
@@ -85,7 +85,7 @@
     var element = document.querySelector(".body-black");
     element.remove();
     html.style.overflow = "auto";
-    popup.style.display = "none";
+    popup.classList.remove("popup-show");
 
     element.addEventListener("click", closePopup);
     popupClose.removeEventListener("keydown", isEnterPress);

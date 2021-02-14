@@ -19,12 +19,13 @@
   margin: 0 auto;
 }
 
-.advantage__item  {
+.advantage__item {
   position: relative;
 
   @include mapa;
 
   width: 48.7%;
+  background-color: $white;
 
   @media (max-width: $tablet-width-only) {
     width: 48%;
@@ -101,8 +102,9 @@
 
 .advantage a {
   &:hover {
-
-    h3, svg, p {
+    h3,
+    svg,
+    p {
       color: $white;
       transition: 0.5s;
     }
@@ -124,12 +126,13 @@
   color: $cyan;
 
   @media (max-width: $tablet-width-only) {
-    padding-top: 11px
+    padding-top: 11px;
   }
 
   @media (max-width: $mobile-width-only) {
     @include font(20px, 28px, 400);
-    padding-top: 13px
+
+    padding-top: 13px;
   }
 }
 
@@ -151,8 +154,3 @@
     }
   }
 }
-
-
-
-
-

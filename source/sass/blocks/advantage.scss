@@ -106,6 +106,7 @@
     svg,
     p {
       color: $white;
+      fill: $white;
       transition: 0.5s;
     }
 
@@ -146,6 +147,7 @@
 
   @media (max-width: $tablet-width-only) {
     padding-top: 9px;
+    letter-spacing: 0;
   }
 
   &.advantage__spacing {

@@ -37,7 +37,11 @@
       popupName.value = storage.name;
       popupPhone.value = storage.phone;
       popupQuestions.value = storage.questions;
-      popupName.focus();
+
+      setTimeout(function() {
+        document.getElementById("name-popup").focus();
+      }, 0);
+
     } else {
       popupName.focus();
     }
@@ -109,8 +113,20 @@
   };
 
   var openCloseLists = function (toggle, list) {
+
     toggle.addEventListener("click", function () {
+      let lists = document.querySelectorAll(".page-footer__js-menu");
+      for (var i = 0; i < lists.length; i++) {
+        if (lists[i].classList.contains("page-footer__js-menu--opened")) {
+          lists[i].classList.add("page-footer__js-menu--closed");
+          lists[i].classList.remove("page-footer__js-menu--opened");
+        }
+      }
+
       onOpenCloseMenu (list);
+      if (list.classList.contains("page-footer__js-menu--closed")) {
+        console.log("усть");
+      }
     });
   };
 
@@ -118,40 +134,42 @@
     openCloseLists(footerToggles[i], lists[i]);
   }
 
-
   function maskPhone(selector, masked = COUNTRY_CODE+'(___)___-__-__') {
-    var inputTel = document.querySelector("input[type=tel]")
+    var inputPhones = document.querySelectorAll(".js-mask");
 
-  function mask(event) {
-    const keyCode = event.keyCode;
-    const template = masked,
-    def = template.replace(/\D/g, ""),
-    val = this.value.replace(/\D/g, "");
-    // console.log(template);
-    let i = 0,
-    newValue = template.replace(/[_\d]/g, function (a) {
-      return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
-    });
-    i = newValue.indexOf("_");
-    if (i !== -1) {
-      newValue = newValue.slice(0, i);
-    }
-    let reg = template.substr(0, this.value.length).replace(/_+/g,
+    inputPhones.forEach(function (phone) {
+
+      function mask(event) {
+        const keyCode = event.keyCode;
+        const template = masked,
+        def = template.replace(/\D/g, ""),
+        val = this.value.replace(/\D/g, "");
+        // console.log(template);
+        let i = 0,
+        newValue = template.replace(/[_\d]/g, function (a) {
+          return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+        });
+        i = newValue.indexOf("_");
+        if (i !== -1) {
+          newValue = newValue.slice(0, i);
+        }
+        let reg = template.substr(0, this.value.length).replace(/_+/g,
         function (a) {
-          return "\\d{1," + a.length + "}";
-        }).replace(/[+()]/g, "\\$&");
-      reg = new RegExp("^" + reg + "$");
-      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
-        this.value = newValue;
+            return "\\d{1," + a.length + "}";
+          }).replace(/[+()]/g, "\\$&");
+        reg = new RegExp("^" + reg + "$");
+        if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
+          this.value = newValue;
+        }
+        if (event.type === "blur" && this.value.length < 5) {
+          this.value = "";
+        }
       }
-      if (event.type === "blur" && this.value.length < 5) {
-        this.value = "";
-      }
-    }
 
-    inputTel.addEventListener("input", mask);
-    inputTel.addEventListener("focus", mask);
-    inputTel.addEventListener("blur", mask);
+      phone.addEventListener("input", mask);
+      phone.addEventListener("focus", mask);
+      phone.addEventListener("blur", mask);
+    });
   }
 
   maskPhone();

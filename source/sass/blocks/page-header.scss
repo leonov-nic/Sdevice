@@ -2,6 +2,8 @@
   position: relative;
   background-color: $dark;
   transition: 0.5s;
+  max-width: 1910px;
+  margin: 0 auto;
 
   background: url("../img/motherboard-desktop@1x.png") 86% 70% no-repeat,
     url("../img/main-triangle.svg") 80.5% 68.8% no-repeat,
@@ -9,6 +11,13 @@
   background-size: 705px 515px, 565px 465px, cover;
 
   min-height: 878px;
+
+  @media (min-resolution: $retina-dppx) {
+    background: url("../img/motherboard-desktop@2x.png") 86% 70% no-repeat,
+    url("../img/main-triangle.svg") 80.5% 68.8% no-repeat,
+    url("../img/main-background-desktop@2x.jpg") center center no-repeat;
+    background-size: 705px 515px, 565px 465px, cover;
+  }
 
   @media (max-width: 1570px) {
     background-position: 96% 70%, 90.5% 68.8%, center center;
@@ -32,6 +41,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
+    max-width: 100%;
     min-height: 696px;
     background-position: 108% 35%, 107.5% 30.2%, center center;
     background-size: 465px 340px, 478px 390px, cover;
@@ -70,6 +80,7 @@
   margin: 0 auto;
   padding-top: 31px;
   max-width: 1910px;
+
   overflow-x: hidden;
 
   @media (max-width: 1600px) {
@@ -109,15 +120,11 @@
 }
 
 .page-header__box-first {
-  width: 1412px;
-  max-width: 1412px;
-
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
-  margin: 0 auto;
   transition: 0.5s;
 
   @media (max-width: 1450px) {
@@ -127,9 +134,19 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    max-width: 720px;
     padding-left: 0;
     padding-right: 0;
+  }
+
+}
+
+.page-header__box-first--width {
+  width: 1412px;
+  max-width: 1412px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width-only) {
+    max-width: 720px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -214,6 +231,7 @@
 }
 
 .page-header a {
+  transition: 0.5s;
   display: block;
 
   @include mapa;
@@ -233,9 +251,14 @@
   }
 }
 
+.page-header svg {
+  fill: $cyan;
+  transition: 0.5s;
+}
+
 .page-header__item {
   &:hover svg {
-    color: $white;
+    fill: $white;
     transition: 0.5s;
   }
 }
@@ -256,7 +279,7 @@
 }
 
 .page-header__icon-phone {
-  margin-right: 12px;
+  margin-right: 6px;
 
   @media (max-width: $tablet-width-only) {
     width: 24px;
@@ -304,20 +327,21 @@ a.page-header__button {
 
 .page-header__box-second {
   position: relative;
-  width: 1412px;
-  max-width: 1412px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 0 auto;
   padding-top: 172px;
 
   @media (max-width: $tablet-width-only) {
-    // width: 720px;
-    // max-width: 720px;
     padding-top: 42px;
     justify-content: flex-start;
   }
+}
+
+.page-header__box-second--width {
+  width: 1412px;
+  max-width: 1412px;
+  margin: 0 auto;
 
   @media (max-width: $mobile-width-only) {
     width: 100%;
@@ -461,6 +485,7 @@ h1 {
   letter-spacing: 0.03em;
   padding: 17px 47px 17px;
   margin-left: 94px;
+  margin-bottom: 10px;
   background-color: $cyan;
   border-radius: 5px;
   transition: 0.5s;

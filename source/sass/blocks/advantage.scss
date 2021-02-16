@@ -10,6 +10,23 @@
   }
 }
 
+.advantage-company-bg {
+  background-image: url("../img/bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 1860px 1225px;
+  background-position: 65px -30px;
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../img/bg-tablet.svg");
+    background-size: 870px 870px;
+    background-position: 207px 93px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    background-image: none;
+  }
+}
+
 .advantage__list {
   @include mapa;
 
@@ -21,11 +38,11 @@
 
 .advantage__item {
   position: relative;
+  background-color: $white;
 
   @include mapa;
 
   width: 48.7%;
-  background-color: $white;
 
   @media (max-width: $tablet-width-only) {
     width: 48%;
@@ -89,7 +106,7 @@
 
 .advantage svg {
   display: block;
-  color: $cyan;
+  fill: $cyan;
   transition: 0.5s;
 }
 
@@ -148,11 +165,5 @@
   @media (max-width: $tablet-width-only) {
     padding-top: 9px;
     letter-spacing: 0;
-  }
-
-  &.advantage__spacing {
-    @media (max-width: $mobile-width-only) {
-      letter-spacing: -0.05em;
-    }
   }
 }

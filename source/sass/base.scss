@@ -21,18 +21,6 @@ body {
 
   font-family: "PT Mono", "Arial", sans-serif;
   color: $gray;
-
-  background: url("../img/polygon-first.svg") 7% 29.8% no-repeat,
-    url("../img/polygon-second.svg") 101% 32% no-repeat;
-  background-size: auto, auto;
-
-  @media (max-width: $tablet-width-only) {
-    background: none;
-    background-image: url("../img/polygon-second.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left 30%;
-  }
 }
 
 .body-black {

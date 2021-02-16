@@ -15,7 +15,7 @@
   var popupPhone = popup.querySelector("[name=phone]");
   var popupQuestions = popup.querySelector("[name=letter]");
   var popupOpen = document.querySelector(".page-header__button");
-  var form = document.querySelector(".popup__form");
+  var form = popup.querySelector("form");
   var storage = {
     name: "",
     phone: "",
@@ -115,20 +115,17 @@
   var openCloseLists = function (toggle, list) {
 
     toggle.addEventListener("click", function () {
-      let lists = document.querySelectorAll(".page-footer__js-menu");
-      for (var i = 0; i < lists.length; i++) {
-        if (lists[i].classList.contains("page-footer__js-menu--opened")) {
-          lists[i].classList.add("page-footer__js-menu--closed");
-          lists[i].classList.remove("page-footer__js-menu--opened");
-        } else {
-          lists[i].classList.remove("page-footer__js-menu--closed");
-          lists[i].classList.add("page-footer__js-menu--opened");
-        }
-      }
 
-      onOpenCloseMenu (list);
-      if (list.classList.contains("page-footer__js-menu--closed")) {
-        console.log("усть");
+      if (list.classList.contains("page-footer__js-menu--opened")) {
+        list.classList.add("page-footer__js-menu--closed");
+        list.classList.remove("page-footer__js-menu--opened");
+      } else {
+        let openedLists = document.querySelectorAll(".page-footer__js-menu");
+        for (var i = 0; i < lists.length; i++) {
+          openedLists[i].classList.add("page-footer__js-menu--closed");
+          openedLists[i].classList.remove("page-footer__js-menu--opened");
+        }
+        onOpenCloseMenu(list);
       }
     });
   };

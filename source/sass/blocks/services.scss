@@ -1,7 +1,7 @@
 .services {
   background-color: $dark;
   padding-top: 88px;
-  padding-bottom: 127px;
+  padding-bottom: 97px;
 
   @media (max-width: $tablet-width-only) {
     padding-top: 50px;
@@ -33,7 +33,7 @@
   }
 }
 
-.services h2 {
+.services p {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   letter-spacing: 0.003em;
 
@@ -64,7 +64,9 @@
   }
 }
 
-.services p {
+.services h2 {
+  position: relative;
+  z-index: 5;
   font-family: "Roboto Condensed", "Arial", sans-serif;
 
   @include font(20px, 30px, 400);
@@ -91,19 +93,6 @@
   }
 }
 
-.services img {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  opacity: 0.2;
-  width: 100%;
-  height: auto;
-  transition: 0.5s;
-}
-
 .services__list {
   padding: 0;
   margin: 0;
@@ -125,6 +114,7 @@
   width: 370px;
   min-height: 620px;
   transition: 0.5s;
+  margin-bottom: 30px;
 
   @media (max-width: 1200px) {
     width: 304px;
@@ -149,10 +139,99 @@
   }
 }
 
+.services__lighting {
+  background-image: url("../img/lighting-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/lighting-desktop@2x.png");
+  }
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../img/lighting-tablet@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/lighting-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../img/lighting-mobile@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/lighting-mobile@2x.png");
+    }
+  }
+}
+
+.services__montage {
+  background-image: url("../img/montage-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/montage-desktop@2x.png");
+  }
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../img/montage-tablet@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/montage-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../img/montage-mobile@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/montage-mobile@2x.png");
+    }
+  }
+}
+
+.services__production {
+  background: url("../img/production-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    background: url("../img/production-desktop@2x.png");
+  }
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../img/production-tablet@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/production-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../img/production-mobile@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/production-mobile@2x.png");
+    }
+  }
+}
+
 .services__item a {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba($dark, 0.8);
+    transition: 0.5s;
+  }
 
   &::after {
     position: absolute;
@@ -170,14 +249,13 @@
   }
 
   &:hover {
-    p {
+    h2 {
       color: $cyan;
       transition: 0.5s;
     }
 
-    img {
-      opacity: 0.4;
-      transition: 0.5s;
+    &::before {
+      background-color: rgba($dark, 0.6);
     }
 
     &::after {

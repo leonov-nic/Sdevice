@@ -11,11 +11,11 @@
   background-color: $cyan;
 }
 
-.popup__form-box__form {
+.popup form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 570px;
+  width: 100%;
 }
 
 .popup h2 {
@@ -80,7 +80,7 @@
   background-size: cover;
 }
 
-form button {
+.popup .button {
   font-family: "Roboto Condensed", "Arial", sans-serif;
 
   @include mapa;

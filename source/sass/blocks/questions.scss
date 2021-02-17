@@ -66,7 +66,7 @@
   }
 }
 
-.questions__form {
+form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -148,7 +148,7 @@
 
   @media (max-width: $tablet-width-only) {
     padding: 14px 19px 18px;
-    width: 47.5%;
+    width: 47.1%;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -174,21 +174,16 @@
   }
 }
 
-.questions button {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-
-  @include mapa;
+.questions .button {
   @include font(14px, 16px, 700);
 
+  width: 270px;
   letter-spacing: 0.055em;
-  text-transform: uppercase;
-  padding: 12px 79px 15px;
+  padding: 12px 50px 15px;
   margin-top: 3px;
-  border-radius: 5px;
   border: 1px solid $white;
   background-color: $cyan;
   color: $white;
-  transition: 0.5s;
 
   &:hover {
     color: $cyan;
@@ -203,7 +198,8 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    padding: 15px 85px 13px;
+    width: 280px;
+    padding: 14px 80px 14px;
     margin-top: 6px;
   }
 

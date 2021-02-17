@@ -66,6 +66,17 @@ a {
   clip-path: inset(100%);
 }
 
+.button {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 5px;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+
 .questions .container {
   max-width: 1220px;
 }

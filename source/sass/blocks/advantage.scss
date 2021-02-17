@@ -39,66 +39,60 @@
 .advantage__item {
   position: relative;
   background-color: $white;
-
-  @include mapa;
-
+  padding: 37px 40px 66px 43px;
+  margin-bottom: 32px;
+  border: 1px solid #ebebeb;
+  border-left: 3px solid $cyan;
+  transition: 0.5s;
   width: 48.7%;
+  min-height: 297px;
 
   @media (max-width: $tablet-width-only) {
+    padding: 23px 25px 20px 24px;
+    margin-bottom: 30px;
     width: 48%;
     min-height: 307px;
   }
 
   @media (max-width: $mobile-width-only) {
+    border-left: 2px solid $cyan;
+    padding: 20px 1px 22px 25px;
+    margin-bottom: 20px;
     width: 100%;
-    min-height: 307px;
+    min-height: 310px;
+
+    &:first-child {
+      padding-right: 10px;
+    }
   }
 }
 
-.advantage__item a {
-  display: block;
-  margin: 0;
+.advantage__item:hover {
+  h3,
+  svg,
+  p {
+    color: $white;
+    fill: $white;
+    transition: 0.5s;
+  }
 
-  padding: 40px 40px 66px 43px;
-  margin-bottom: 32px;
-  border: 1px solid #ebebeb;
+  background-color: $cyan;
+  border: 1px solid $cyan;
   border-left: 3px solid $cyan;
-  min-height: 297px;
   transition: 0.5s;
-
-  @media (max-width: $tablet-width-only) {
-    padding: 20px 25px 20px 24px;
-    margin-bottom: 30px;
-    min-height: 307px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    border-left: 2px solid $cyan;
-    padding: 23px 15px 22px 25px;
-    margin-bottom: 20px;
-    min-height: 309px;
-  }
 }
 
 .advantage__item:nth-last-child(-n+2) {
   @media (max-width: $tablet-width-only) {
     min-height: 232px;
-
-    a {
-      min-height: 232px;
-    }
   }
 
   @media (max-width: $mobile-width-only) {
-    min-height: 235px;
-
-    a {
-      min-height: 235px;
-    }
+    min-height: 232px;
   }
 }
 
-.advantage__item--padding a {
+.advantage__item--padding {
   @media (max-width: $tablet-width-only) {
     padding-right: 10px;
   }
@@ -110,33 +104,9 @@
   transition: 0.5s;
 }
 
-.advantage__icon-tag {
-  @media (max-width: $tablet-width-only) {
-    width: 31px;
-    height: auto;
-  }
-}
-
-.advantage a {
-  &:hover {
-    h3,
-    svg,
-    p {
-      color: $white;
-      fill: $white;
-      transition: 0.5s;
-    }
-
-    background-color: $cyan;
-    border: 1px solid $cyan;
-    border-left: 3px solid $cyan;
-    transition: 0.5s;
-  }
-}
-
 .advantage h3 {
   margin: 0;
-  padding-top: 17px;
+  padding-top: 20px;
 
   @include font(24px, 34px, 400);
 
@@ -144,7 +114,7 @@
   color: $cyan;
 
   @media (max-width: $tablet-width-only) {
-    padding-top: 11px;
+    padding-top: 8px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -163,7 +133,12 @@
   letter-spacing: -0.026em;
 
   @media (max-width: $tablet-width-only) {
-    padding-top: 9px;
-    letter-spacing: 0;
+    padding-top: 6px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 8px;
+    line-height: 22px;
+    letter-spacing: -0.026em;
   }
 }

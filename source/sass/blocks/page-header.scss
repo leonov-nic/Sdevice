@@ -6,9 +6,9 @@
   margin: 0 auto;
 
   background: url("../img/motherboard-desktop@1x.png") 86% 70% no-repeat,
-    url("../img/main-triangle.svg") 80.5% 68.8% no-repeat,
+    url("../img/main-triangle.svg") 80.7% 69.8% no-repeat,
     url("../img/main-background-desktop@1x.jpg") center center no-repeat;
-  background-size: 705px 515px, 565px 465px, cover;
+  background-size: 705px 515px, 608px 510px, cover;
 
   min-height: 878px;
 
@@ -80,7 +80,6 @@
   margin: 0 auto;
   padding-top: 31px;
   max-width: 1910px;
-
   overflow-x: hidden;
 
   @media (max-width: 1600px) {
@@ -167,36 +166,37 @@
   }
 }
 
+.page-header p {
+  @include mapa;
+  width: 100%;
+}
+
 .page-header__list-logo {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
   @include mapa;
-  width: 134px;
+  width: 135px;
 
   @media (max-width: $mobile-width-only) {
     display: none;
   }
 }
 
-.page-header p {
-  width: 100%;
-
-  @include mapa;
-}
-
-.page-header__item-logo:first-child p {
+.page-header__list-logo h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
 
-  @include font(25px, 35px, 400);
+  @include font(25px, 35px, 700);
+  margin: 0;
   color: $white;
 }
 
-.page-header__item-logo:nth-child(2) p {
+.page-header__list-logo p {
+  font-family: "Roboto", "Arial", sans-serif;
+
   @include font(12px, 13px, 500);
 
-  letter-spacing: -0.035em;
   color: $gray-light;
 }
 
@@ -244,7 +244,7 @@
 }
 
 .page-header__item p {
-  padding-left: 10px;
+  padding-left: 7px;
 
   @media (max-width: $tablet-width-only) {
     display: none;
@@ -256,8 +256,8 @@
   transition: 0.5s;
 }
 
-.page-header__item {
-  &:hover svg {
+.page-header__item:hover {
+  svg {
     fill: $white;
     transition: 0.5s;
   }
@@ -270,7 +270,7 @@
 }
 
 .page-header__icon-envelope {
-  margin-right: 11px;
+  margin-right: 12px;
 
   @media (max-width: $tablet-width-only) {
     width: 25px;
@@ -279,7 +279,8 @@
 }
 
 .page-header__icon-phone {
-  margin-right: 6px;
+  // margin-right: 3px;
+  width: 30px;
 
   @media (max-width: $tablet-width-only) {
     width: 24px;
@@ -298,21 +299,17 @@
   }
 }
 
-a.page-header__button {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-
+.page-header__box-first .button {
   @include font(14px, 16px, 700);
-  text-transform: uppercase;
+
   letter-spacing: 0.05em;
   padding: 14px 27px 13px;
   border: 1px solid $white;
-  border-radius: 5px;
-  transition: 0.5s;
 
   &:hover {
     border: 1px solid $dark;
     background-color: $cyan;
-    transition: 0.5s;
+
   }
 
   &:active {
@@ -428,7 +425,7 @@ h1 {
   letter-spacing: -0.01em;
   font-family: "PT Mono", "Arial", sans-serif;
   color: $white;
-  padding-left: 98px;
+  padding-left: 95px;
   padding-top: 28px;
   padding-bottom: 44px;
 
@@ -446,8 +443,6 @@ h1 {
 
   @media (max-width: $tablet-width-only) {
     @include font(18px, 28px, 400);
-
-    letter-spacing: 0;
     padding-top: 29px;
     padding-left: 52px;
     padding-bottom: 56px;
@@ -472,23 +467,15 @@ h1 {
   }
 }
 
-.page-header__box-heading a {
-  display: block;
-  position: relative;
-  z-index: 3;
-
+.page-header__box-heading .button {
   @include font(16px, 19px, 700);
 
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  text-transform: uppercase;
-  text-align: center;
   letter-spacing: 0.03em;
   padding: 17px 47px 17px;
   margin-left: 94px;
   margin-bottom: 10px;
   background-color: $cyan;
   border-radius: 5px;
-  transition: 0.5s;
 
   span {
     display: none;

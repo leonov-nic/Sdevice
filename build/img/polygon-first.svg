@@ -1,7 +1,1 @@
-<svg width="637" height="1225" viewBox="0 0 637 1225" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M339.594 75.3811L339.594 331.777L117.549 203.579L339.594 75.3811Z" stroke="#EBEBEB"/>
-<path d="M592.842 744.584L318.167 1220.33L43.4923 744.584L592.842 744.584Z" stroke="#EBEBEB"/>
-<circle cx="43" cy="744" r="5" fill="#F2F2F2"/>
-<circle cx="318" cy="1220" r="5" fill="#F2F2F2"/>
-<circle cx="593" cy="744" r="5" fill="#F2F2F2"/>
-</svg>
+<svg width="637" height="1225" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M339.594 75.381v256.396L117.549 203.579 339.594 75.381zm253.248 669.203L318.167 1220.33 43.492 744.584h549.35z" stroke="#EBEBEB"/><circle cx="43" cy="744" r="5" fill="#F2F2F2"/><circle cx="318" cy="1220" r="5" fill="#F2F2F2"/><circle cx="593" cy="744" r="5" fill="#F2F2F2"/></svg>

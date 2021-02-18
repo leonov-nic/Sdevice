@@ -66,10 +66,7 @@
   }
 }
 
-form {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.questions form {
   width: 570px;
   margin-left: auto;
 
@@ -120,31 +117,9 @@ form {
 }
 
 .questions input {
-  @include mapa;
-  @include font(16px, 22px, 400);
-
-  position: relative;
-  color: $white;
   padding: 14px 16px 15px;
   margin-bottom: 40px;
   width: 270px;
-  border: none;
-  background-color: rgba($white, 0.1);
-  transition: 0.5s;
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 4px 6px rgba($white, 0.3);
-    transition: 0.5s;
-  }
-
-  &::placeholder {
-    color: $white;
-  }
-
-  &:focus:invalid {
-    box-shadow: 0 0 3px 3px red;
-  }
 
   @media (max-width: $tablet-width-only) {
     padding: 14px 19px 18px;
@@ -155,6 +130,10 @@ form {
     width: 100%;
     margin-bottom: 28px;
   }
+}
+
+.questions input::-moz-placeholder {
+  color: $white;
 }
 
 .questions input[name="letter"] {
@@ -207,13 +186,6 @@ form {
     width: 100%;
     margin-top: 4px;
   }
-}
-
-.questions input[type="checkbox"] {
-  width: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 
 .questions__checkbox-indicator {
@@ -302,14 +274,9 @@ form {
 }
 
 .questions label {
-  @include font(14px, 16px, 400);
   letter-spacing: 0.03em;
-  display: flex;
-  align-items: center;
-  margin: 0;
   padding-top: 3px;
   padding-left: 40px;
-  color: rgba($white, 0.8);
 
   @media (max-width: $tablet-width-only) {
     padding-top: 5px;

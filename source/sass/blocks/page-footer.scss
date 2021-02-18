@@ -20,6 +20,10 @@
   }
 }
 
+.page-footer ul {
+  list-style: none;
+}
+
 .page-footer__wrapper {
   display: flex;
   justify-content: space-between;
@@ -94,10 +98,11 @@
   align-items: center;
   align-content: center;
   width: 216px;
+}
 
-  svg {
-    fill: $cyan;
-  }
+.page-footer__box-logo svg {
+  fill: $cyan;
+  color: $cyan;
 }
 
 .page-footer__list-logo {
@@ -106,7 +111,7 @@
   flex-wrap: wrap;
 
   @include mapa;
-  width: 148px;
+  width: 150px;
 }
 
 .page-footer__list-logo h2 {

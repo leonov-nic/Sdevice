@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-  <!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-  width="611px" height="487px" viewBox="0 0 611 487" enable-background="new 0 0 611 487" xml:space="preserve">
-  <path opacity="0.2" fill="none" stroke="#FFFFFF" enable-background="new"
-  d="M605.842,5.584l-274.675,475.75L56.492,5.584
-  H605.842z"/>
-  <path opacity="0.2" fill="none" stroke="#FFFFFF" enable-background="new    " d="M326.148,203.75L165.5,482L4.853,203.75H326.148z"
-  />
-  <circle fill="#FFFFFF" cx="56" cy="5" r="5"/>
-  <circle fill="#FFFFFF" cx="5" cy="204" r="5"/>
-  <circle fill="#FFFFFF" cx="166" cy="482" r="5"/>
-  <circle fill="#FFFFFF" cx="331" cy="481" r="5"/>
-  <circle fill="#FFFFFF" cx="606" cy="5" r="5"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="611" height="487"><path opacity=".2" fill="none" stroke="#FFF" d="M605.842 5.584l-274.675 475.75L56.492 5.584h549.35z"/><path opacity=".2" fill="none" stroke="#FFF" d="M326.148 203.75L165.5 482 4.853 203.75h321.295z"/><circle fill="#FFF" cx="56" cy="5" r="5"/><circle fill="#FFF" cx="5" cy="204" r="5"/><circle fill="#FFF" cx="166" cy="482" r="5"/><circle fill="#FFF" cx="331" cy="481" r="5"/><circle fill="#FFF" cx="606" cy="5" r="5"/></svg>

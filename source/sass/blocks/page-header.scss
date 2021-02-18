@@ -1,21 +1,26 @@
+.page-header ul {
+  list-style: none;
+}
+
 .page-header {
   position: relative;
-  background-color: $dark;
   transition: 0.5s;
   max-width: 1910px;
   margin: 0 auto;
 
   background: url("../img/motherboard-desktop@1x.png") 86% 70% no-repeat,
     url("../img/main-triangle.svg") 80.7% 69.8% no-repeat,
-    url("../img/main-background-desktop@1x.jpg") center center no-repeat;
+    url("../img/main-background-desktop@1x.jpg") center center no-repeat,
+    $dark;
   background-size: 705px 515px, 608px 510px, cover;
 
   min-height: 878px;
 
   @media (min-resolution: $retina-dppx) {
     background: url("../img/motherboard-desktop@2x.png") 86% 70% no-repeat,
-    url("../img/main-triangle.svg") 80.5% 68.8% no-repeat,
-    url("../img/main-background-desktop@2x.jpg") center center no-repeat;
+      url("../img/main-triangle.svg") 80.5% 68.8% no-repeat,
+      url("../img/main-background-desktop@2x.jpg") center center no-repeat,
+      $dark;
     background-size: 705px 515px, 565px 465px, cover;
   }
 
@@ -29,7 +34,7 @@
   }
 
   @media (max-width: 1250px) {
-    background-position: 115% 70%, 105% 68.8%, center center;;
+    background-position: 115% 70%, 105% 68.8%, center center;
   }
 
   @media (max-width: 1155px) {
@@ -43,6 +48,7 @@
   @media (max-width: $tablet-width-only) {
     max-width: 100%;
     min-height: 696px;
+
     background-position: 108% 35%, 107.5% 30.2%, center center;
     background-size: 465px 340px, 478px 390px, cover;
   }
@@ -136,7 +142,6 @@
     padding-left: 0;
     padding-right: 0;
   }
-
 }
 
 .page-header__box-first--width {
@@ -309,7 +314,6 @@
   &:hover {
     border: 1px solid $dark;
     background-color: $cyan;
-
   }
 
   &:active {

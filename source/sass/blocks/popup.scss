@@ -12,9 +12,6 @@
 }
 
 .popup form {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -36,34 +33,15 @@
 }
 
 .popup input {
-  @include mapa;
-  @include font(16px, 22px, 400);
-
-  position: relative;
-  color: $white;
   padding: 14px 16px 15px;
   margin-bottom: 30px;
   width: 100%;
-  border: none;
   background-color: rgba($white, 0.1);
-  transition: 0.5s;
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 4px 6px rgba($white, 0.3);
-    transition: 0.5s;
-  }
-
-  &::placeholder {
-    color: $white;
-  }
 }
 
 .popup input[name="letter"] {
   width: 100%;
   min-height: 104px;
-
-  display: flex;
   padding-bottom: 70px;
 }
 
@@ -105,10 +83,6 @@
     box-shadow: 0 0 4px 6px rgba($white, 0.3);
     transition: 0.5s;
   }
-}
-
-.popup input[type="checkbox"] {
-  width: 0;
 }
 
 .popup__checkbox-indicator {
@@ -166,12 +140,6 @@
 }
 
 .popup label {
-  @include font(14px, 16px, 400);
-
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
   padding-left: 40px;
   color: rgba($white, 0.8);
 }

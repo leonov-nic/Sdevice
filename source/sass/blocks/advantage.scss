@@ -63,11 +63,15 @@
     padding: 20px 1px 22px 25px;
     margin-bottom: 20px;
     width: 100%;
-    min-height: 310px;
+    min-height: 250px;
 
     &:first-child {
       padding-right: 10px;
     }
+  }
+
+  @media (max-width: 500px) {
+    min-height: 310px;
   }
 }
 

@@ -172,6 +172,7 @@ p.page-footer__service {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 112px;
+  max-width: 112px;
   padding-top: 53px;
 
   @media (max-width: $tablet-width-only) {
@@ -201,17 +202,22 @@ p.page-footer__service {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 574px;
-  margin-left: 50px;
+  // width: 574px;
+  width: 40.5%;
+  margin-left: 52px;
   transition: 0.5s;
 
   @media (max-width: 1380px) {
     margin-left: 0;
   }
 
-  @media (max-width: 1331px) {
-    flex-grow: 1;
-    max-width: 50%;
+  @media (max-width: 1220px) {
+    width: 255px;
+    margin-right: 30px;
+  }
+
+  @media (max-width: 1055px) {
+    margin-right: 0;
   }
 
   @media (max-width: $tablet-width-only) {
@@ -236,15 +242,14 @@ p.page-footer__service {
 
 .page-footer__navigation b,
 .page-footer__box-ofis b {
+  width: 100%;
   font-family: "Roboto Condensed", "Arial", sans-serif;
 
   @include font(15px, 16px, 400);
-
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $dark;
-  margin: 0;
-  padding-bottom: 9px;
+  padding-bottom: 25px;
   padding-left: 2px;
   display: block;
 
@@ -254,6 +259,7 @@ p.page-footer__service {
 
   @media (max-width: $mobile-width-only) {
     padding-left: 0;
+    padding-bottom: 9px;
   }
 }
 
@@ -262,18 +268,18 @@ p.page-footer__service {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0;
+  margin: 0;
   transition: 0.5s;
 }
 
 .page-footer__list--navigation {
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
-  max-height: 100px;
+  align-content: flex-start;
+  width: 46%;
+  margin: 0;
   transition: 0.5s;
 
-  @media (max-width: $tablet-width-only) {
-    max-height: 100%;
+  @media (max-width: 1220px) {
+    width: 100%;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -281,24 +287,19 @@ p.page-footer__service {
   }
 }
 
-.page-footer__item {
-  width: 46%;
+.page-footer__navigation li {
+  width: 100%;
+  margin-bottom: 1px;
 
   @media (max-width: $tablet-width-only) {
-    width: 100%;
-  }
-}
-
-.page-footer__navigation .page-footer__item {
-  margin-right: 45px;
-
-  @media (max-width: $tablet-width-only) {
-    margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
 .page-footer__navigation a,
 .page-footer__box-ofis a {
+  width: 260px;
+  position: relative;
   display: block;
 
   @include font(15px, 24px, 400);
@@ -307,12 +308,22 @@ p.page-footer__service {
   opacity: 0.5;
   transition: 0.5s;
 
+  &::before {
+    position: absolute;
+    content: '';
+    top: -2px;
+    right: -2px;
+    left: -2px;
+    bottom: -2px;
+  }
+
   &:hover {
     color: $cyan;
     transition: 0.5s;
   }
 
   @media (max-width: $tablet-width-only) {
+    width: 100%;
     @include font(15px, 25px, 400);
     letter-spacing: 0.001em;
   }
@@ -335,6 +346,10 @@ p.page-footer__service {
 }
 
 .page-footer__box-ofis {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
   position: relative;
   width: 358px;
   padding-left: 24px;
@@ -342,7 +357,6 @@ p.page-footer__service {
 
   @media (max-width: 1331px) {
     padding-left: 0;
-    padding-top: 50px;
     transition: 0.5s;
   }
 
@@ -353,7 +367,7 @@ p.page-footer__service {
   }
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 27px;
+    padding-top: 30px;
     width: 100%;
     padding-right: 18px;
     padding-left: 50px;
@@ -370,7 +384,7 @@ p.page-footer__service {
   @media (max-width: $mobile-width-only) {
     display: none;
     width: 100%;
-    padding-top: 8px;
+    padding-top: 22px;
   }
 }
 
@@ -381,8 +395,8 @@ p.page-footer__service {
 .page-footer__box-confidential {
   border-top: 1px solid rgba($black, 0.2);
   width: 100%;
-  padding: 12px 0;
-  margin-top: 45px;
+  padding: 14px 0;
+  margin-top: 57px;
   letter-spacing: 0.015em;
   transition: 0.5s;
 
@@ -392,12 +406,12 @@ p.page-footer__service {
   }
 
   @media (max-width: $tablet-width-only) {
-    margin-top: 19px;
+    margin-top: 36px;
     padding: 21px 0;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-top: 9px;
+    margin-top: 24px;
     padding: 21px 15px;
   }
 }
@@ -445,8 +459,11 @@ p.page-footer__service {
       padding-right: 50px;
     }
 
-    @media (max-width: $mobile-width-only) {
+    @media (max-width: $tablet-width-only) {
       padding-left: 0;
+    }
+
+    @media (max-width: $mobile-width-only) {
       padding-right: 23px;
     }
 

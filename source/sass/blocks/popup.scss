@@ -56,6 +56,30 @@
   background-image: url("../img/icon-close.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -5px;
+  }
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 4px 6px rgba($white, 0.3);
+  }
 }
 
 .popup .button {
@@ -86,6 +110,8 @@
 }
 
 .popup__checkbox-indicator {
+  cursor: pointer;
+
   &::after {
     position: absolute;
     left: 0;

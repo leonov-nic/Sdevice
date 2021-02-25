@@ -189,6 +189,7 @@
 }
 
 .questions__checkbox-indicator {
+  cursor: pointer;
   &::after {
     position: absolute;
     left: 8px;

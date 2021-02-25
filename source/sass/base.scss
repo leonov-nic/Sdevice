@@ -1,3 +1,7 @@
+// * {
+//   outline: 1px solid red;
+// }
+
 html {
   box-sizing: border-box;
 
@@ -56,6 +60,8 @@ input {
   background-color: rgba($white, 0.1);
   transition: 0.5s;
   border: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
 
   &:focus {
     outline: none;
@@ -63,12 +69,20 @@ input {
     transition: 0.5s;
   }
 
+  &:hover {
+    box-shadow: 0 0 0 1px rgba($white, 0.5);
+  }
+
   &::placeholder, {
     color: $white;
   }
 
   &:focus:invalid {
-    box-shadow: 0 0 3px 3px red;
+    box-shadow: 0 0 4px 6px rgba($white, 0.3);
+  }
+
+  &:invalid {
+    box-shadow: 0 0 2px 2px red;
   }
 }
 
@@ -124,6 +138,15 @@ label {
 
 .questions .container {
   max-width: 1220px;
+}
+
+.company .container,
+.advantage .container  {
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 14px;
+  }
 }
 
 .container {

@@ -6,7 +6,6 @@
   var COUNTRY_CODE = "+7";
   var html = document.querySelector("html");
   var pageFooter = document.querySelector(".page-footer");
-  var footerToggles = document.querySelectorAll(".page-footer__toggles");
   var lists = document.querySelectorAll(".page-footer__js-menu");
   var popup = document.querySelector(".popup");
   var popupClose = popup.querySelector(".popup__close");
@@ -138,9 +137,9 @@
     });
   };
 
-  if (footerToggles && lists) {
-    for (var i = 0; i < footerToggles.length; i++) {
-      openCloseLists(footerToggles[i], lists[i]);
+  if (lists) {
+    for (var i = 0; i < lists.length; i++) {
+      openCloseLists(lists[i], lists[i]);
     }
   }
 

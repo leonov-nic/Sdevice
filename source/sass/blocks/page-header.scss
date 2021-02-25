@@ -171,6 +171,18 @@
   }
 }
 
+
+
+.page-header__icon-text {
+  fill: red;
+}
+
+
+
+
+
+
+
 .page-header p {
   @include mapa;
   width: 100%;
@@ -236,11 +248,23 @@
 }
 
 .page-header a {
+  position: relative;
   transition: 0.5s;
   display: block;
 
   @include mapa;
   color: $white;
+
+  @media (max-width: $tablet-width-only) {
+    &::before {
+      position: absolute;
+      content: '';
+      top: -5px;
+      right: -5px;
+      left: -5px;
+      bottom: -5px;
+    }
+  }
 }
 
 .page-header__item a {

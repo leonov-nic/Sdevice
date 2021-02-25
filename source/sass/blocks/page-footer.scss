@@ -100,35 +100,10 @@
   width: 216px;
 }
 
-.page-footer__box-logo svg {
-  fill: $cyan;
-  color: $cyan;
-}
-
-.page-footer__list-logo {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  @include mapa;
-  width: 150px;
-}
-
-.page-footer__list-logo h2 {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-
-  @include font(25px, 29px, 700);
-  margin: 0;
-  margin-bottom: 2px;
-  color: $black;
-}
-
-.page-footer__list-logo p {
-  font-family: "Roboto", "Arial", sans-serif;
-
-  @include font(12px, 14px, 500);
-  color: $gray-light;
-}
+// .page-footer__box-logo svg {
+//   fill: $cyan;
+//   color: $cyan;
+// }
 
 .page-footer p {
   width: 100%;
@@ -139,6 +114,10 @@
   @media (max-width: $tablet-width-only) {
     width: auto;
   }
+}
+
+.page-footer_icon-img img {
+  display: block;
 }
 
 p.page-footer__service {

@@ -262,6 +262,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 270px;
+  order: 1;
 
   @media (max-width: $tablet-width-only) {
     width: 275px;

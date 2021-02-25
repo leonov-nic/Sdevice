@@ -14,6 +14,9 @@
   var popupQuestions = popup.querySelector("[name=letter]");
   var popupOpen = document.querySelector("#page-header-button");
   var form = popup.querySelector("form");
+  var inputsForm = document.querySelectorAll("input");
+  var buttonsSubmit = document.querySelectorAll("[type=submit]");
+
   var storage = {
     name: "",
     phone: "",
@@ -142,6 +145,32 @@
       openCloseLists(lists[i], lists[i]);
     }
   }
+
+  var errorFieldInput = function (fields) {
+
+    fields.forEach(function (field) {
+
+      if (field.value && field.validity.patternMismatch || !field.value) {
+        field.classList.add("field-invalid");
+      } else {
+        field.classList.remove("field-invalid");
+      }
+    });
+
+     fields.forEach(function (field) {
+       field.addEventListener("blur", function () {
+        if (!field.value || field.value && !field.validity.patternMismatch) {
+          field.classList.remove("field-invalid");
+        }
+       });
+     });
+  };
+
+  buttonsSubmit.forEach(function (button) {
+    button.addEventListener("click", function () {
+      errorFieldInput(inputsForm);
+    });
+  });
 
   function maskPhone(selector, masked = COUNTRY_CODE+'(___)___-__-__') {
     var inputPhones = document.querySelectorAll(".js-mask");

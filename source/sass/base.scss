@@ -77,13 +77,17 @@ input {
     color: $white;
   }
 
-  &:focus:invalid {
-    box-shadow: 0 0 4px 6px rgba($white, 0.3);
+  &:-moz-submit-invalid {
+    box-shadow: none;
   }
 
-  &:invalid {
-    box-shadow: 0 0 2px 2px red;
+  &:-moz-ui-invalid {
+    box-shadow: none;
   }
+}
+
+.field-invalid {
+  box-shadow: 0 0 2px 2px red;
 }
 
 input[name="letter"] {

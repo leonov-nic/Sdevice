@@ -7,14 +7,13 @@
   transition: 0.5s;
   max-width: 1910px;
   margin: 0 auto;
+  min-height: 875px;
 
   background: url("../img/motherboard-desktop@1x.png") 86% 70% no-repeat,
-    url("../img/main-triangle.svg") 80.7% 69.8% no-repeat,
+    url("../img/main-triangle.svg") 80.7% 69.6% no-repeat,
     url("../img/main-background-desktop@1x.jpg") center center no-repeat,
     $dark;
-  background-size: 705px 515px, 608px 510px, cover;
-
-  min-height: 878px;
+  background-size: 705px 515px, 606px 494px, cover;
 
   @media (min-resolution: $retina-dppx) {
     background: url("../img/motherboard-desktop@2x.png") 86% 70% no-repeat,
@@ -71,8 +70,8 @@
 
   @media (max-width: 400px) {
     min-height: 647px;
-    background-position: 156% 21%, -190% 31.5%, center center;
-    background-size: 301px 220px, 415px 363px, cover;
+    background-position: 156% 21%, -178% 25%, center center;
+    background-size: 301px 220px, 418px 363px, cover;
   }
 }
 
@@ -84,43 +83,12 @@
   align-items: flex-start;
   align-content: flex-start;
   margin: 0 auto;
-  padding-top: 31px;
+  padding-top: 26px;
   max-width: 1910px;
   overflow-x: hidden;
 
-  @media (max-width: 1600px) {
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  @media (max-width: 1450px) {
-    &::before {
-      right: 100px;
-    }
-  }
-
-  @media (max-width: $tablet-width-only) {
-    &::before {
-      right: -172px;
-      top: 92px;
-      width: 484px;
-      height: 385px;
-    }
-  }
-
   @media (max-width: $mobile-width-only) {
-    padding-top: 17px;
-    padding-left: 17px;
-    padding-right: 17px;
-
-    &::before {
-      right: 0;
-      top: 70px;
-      width: 280px;
-      height: 366px;
-      background-position: calc(50% + 218px) top;
-    }
+    padding-top: 10px;
   }
 }
 
@@ -141,6 +109,11 @@
   @media (max-width: $tablet-width-only) {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -179,6 +152,7 @@
   @media (max-width: $mobile-width-only) {
     width: 147px;
     height: 38px;
+    margin-top: 1px;
   }
 }
 
@@ -225,7 +199,7 @@
   @media (max-width: $tablet-width-only) {
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       top: -5px;
       right: -5px;
       left: -5px;
@@ -275,7 +249,6 @@
 }
 
 .page-header__icon-phone {
-  // margin-right: 3px;
   width: 30px;
 
   @media (max-width: $tablet-width-only) {
@@ -328,6 +301,11 @@
     padding-top: 42px;
     justify-content: flex-start;
   }
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .page-header__box-second--width {
@@ -367,17 +345,17 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    width: 497px;
+    width: 517px;
     max-width: 720px;
-    padding-left: 66px;
-    padding-top: 16px;
+    padding-left: 86px;
+    padding-top: 14px;
     margin-right: 0;
   }
 
   @media (max-width: $mobile-width-only) {
     position: relative;
     z-index: 4;
-    width: 400px;
+    width: 100%;
     max-width: 400px;
     padding-left: 0;
     padding-top: 120px;
@@ -400,7 +378,7 @@ h1 {
   text-transform: uppercase;
   color: $white;
   margin: 0;
-  padding-top: 58px;
+  padding-top: 55px;
 
   @media (max-width: $tablet-width-only) {
     @include font(60px, 70px, 700);
@@ -409,7 +387,7 @@ h1 {
   @media (max-width: $mobile-width-only) {
     @include font(40px, 47px, 700);
 
-    padding-top: 70px;
+    padding-top: 65px;
   }
 }
 

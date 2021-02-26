@@ -282,14 +282,13 @@ p.page-footer__service {
   display: block;
 
   @include font(15px, 24px, 400);
-
   color: $dark;
   opacity: 0.5;
   transition: 0.5s;
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: -2px;
     right: -2px;
     left: -2px;
@@ -303,6 +302,7 @@ p.page-footer__service {
 
   @media (max-width: $tablet-width-only) {
     width: 100%;
+
     @include font(15px, 25px, 400);
     letter-spacing: 0.001em;
   }
@@ -476,6 +476,25 @@ p.page-footer__service {
   @media (max-width: $mobile-width-only) {
     padding: 8px 0;
     margin-bottom: 3px;
+  }
+}
+
+.page-footer__box-confidential a {
+  position: relative;
+  color: $black;
+  transition: 0.5s;
+
+  &:hover {
+    color: $cyan;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    right: -2px;
+    left: -2px;
+    bottom: -2px;
   }
 }
 

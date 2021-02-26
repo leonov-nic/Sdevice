@@ -14,7 +14,7 @@
   var popupQuestions = popup.querySelector("[name=letter]");
   var popupOpen = document.querySelector("#page-header-button");
   var form = popup.querySelector("form");
-  var inputsForm = document.querySelectorAll("input");
+  var inputsForm = document.querySelectorAll("input[required]");
   var buttonsSubmit = document.querySelectorAll("[type=submit]");
 
   var storage = {
@@ -149,21 +149,22 @@
   var errorFieldInput = function (fields) {
 
     fields.forEach(function (field) {
+      var validity = field.validity;
 
-      if (field.value && field.validity.patternMismatch || !field.value) {
+      if (validity.patternMismatch) {
         field.classList.add("field-invalid");
       } else {
         field.classList.remove("field-invalid");
       }
-    });
 
-     fields.forEach(function (field) {
-       field.addEventListener("blur", function () {
-        if (!field.value || field.value && !field.validity.patternMismatch) {
+      field.addEventListener("blur", function () {
+        if (!field.value || field.value && !validity.patternMismatch) {
           field.classList.remove("field-invalid");
+        } else {
+          field.classList.add("field-invalid");
         }
-       });
-     });
+      });
+    });
   };
 
   buttonsSubmit.forEach(function (button) {

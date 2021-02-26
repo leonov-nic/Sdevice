@@ -160,7 +160,7 @@
     }
   }
 
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: $mobile-width-only) {
     background-image: url("../img/lighting-mobile@1x.png");
 
     @media (min-resolution: $retina-dppx) {
@@ -186,7 +186,7 @@
     }
   }
 
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: $mobile-width-only) {
     background-image: url("../img/montage-mobile@1x.png");
 
     @media (min-resolution: $retina-dppx) {
@@ -212,7 +212,7 @@
     }
   }
 
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: $mobile-width-only) {
     background-image: url("../img/production-mobile@1x.png");
 
     @media (min-resolution: $retina-dppx) {

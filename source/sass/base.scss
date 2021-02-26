@@ -1,10 +1,5 @@
-// * {
-//   outline: 1px solid red;
-// }
-
 html {
   box-sizing: border-box;
-
   scroll-behavior: smooth;
 }
 
@@ -14,7 +9,6 @@ body {
   position: relative;
   min-width: 320px;
   margin: 0 auto;
-
   font-family: "PT Mono", "Arial", sans-serif;
   color: $gray;
 }
@@ -145,7 +139,7 @@ label {
 }
 
 .company .container,
-.advantage .container  {
+.advantage .container {
   @media (max-width: $mobile-width-only) {
     width: 100%;
     max-width: 100%;

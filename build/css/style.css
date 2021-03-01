@@ -1903,6 +1903,7 @@ p.page-footer__service {
   display: block;
   width: 26px;
   height: auto;
+  padding-bottom: 4px;
   fill: #cdcdcd;
   -webkit-transition: 0.5s;
   transition: 0.5s; }
@@ -1992,7 +1993,7 @@ p.page-footer__service {
 .page-footer__list--navigation {
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  width: 46%;
+  width: 50%;
   margin: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s; }
@@ -2010,11 +2011,17 @@ p.page-footer__service {
     .page-footer__navigation li {
       margin-bottom: 0; } }
 
+.page-footer__item--pl {
+  padding-left: 22px; }
+  @media (max-width: 1220px) {
+    .page-footer__item--pl {
+      padding-left: 0; } }
+
 .page-footer__navigation a,
 .page-footer__box-ofis a {
-  width: 260px;
   position: relative;
-  display: block;
+  display: inline-block;
+  vertical-align: top;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
@@ -2022,14 +2029,6 @@ p.page-footer__service {
   opacity: 0.5;
   -webkit-transition: 0.5s;
   transition: 0.5s; }
-  .page-footer__navigation a::before,
-  .page-footer__box-ofis a::before {
-    position: absolute;
-    content: "";
-    top: -2px;
-    right: -2px;
-    left: -2px;
-    bottom: -2px; }
   .page-footer__navigation a:hover,
   .page-footer__box-ofis a:hover {
     color: #00b2ff;
@@ -2205,13 +2204,6 @@ p.page-footer__service {
   transition: 0.5s; }
   .page-footer__box-confidential a:hover {
     color: #00b2ff; }
-  .page-footer__box-confidential a::before {
-    position: absolute;
-    content: "";
-    top: -2px;
-    right: -2px;
-    left: -2px;
-    bottom: -2px; }
 
 @media (max-width: 1023px) {
   .page-footer__item-confidential--tablet {

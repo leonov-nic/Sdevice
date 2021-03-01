@@ -100,11 +100,6 @@
   width: 216px;
 }
 
-// .page-footer__box-logo svg {
-//   fill: $cyan;
-//   color: $cyan;
-// }
-
 .page-footer p {
   width: 100%;
 
@@ -167,6 +162,7 @@ p.page-footer__service {
   display: block;
   width: 26px;
   height: auto;
+  padding-bottom: 4px;
   fill: $social;
   transition: 0.5s;
 
@@ -181,7 +177,6 @@ p.page-footer__service {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  // width: 574px;
   width: 40.5%;
   margin-left: 52px;
   transition: 0.5s;
@@ -253,7 +248,7 @@ p.page-footer__service {
 
 .page-footer__list--navigation {
   align-content: flex-start;
-  width: 46%;
+  width: 50%;
   margin: 0;
   transition: 0.5s;
 
@@ -275,25 +270,24 @@ p.page-footer__service {
   }
 }
 
+.page-footer__item--pl {
+  padding-left: 22px;
+
+  @media (max-width: 1220px) {
+    padding-left: 0;
+  }
+}
+
 .page-footer__navigation a,
 .page-footer__box-ofis a {
-  width: 260px;
   position: relative;
-  display: block;
+  display: inline-block;
+  vertical-align: top;
 
   @include font(15px, 24px, 400);
   color: $dark;
   opacity: 0.5;
   transition: 0.5s;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: -2px;
-    right: -2px;
-    left: -2px;
-    bottom: -2px;
-  }
 
   &:hover {
     color: $cyan;
@@ -486,15 +480,6 @@ p.page-footer__service {
 
   &:hover {
     color: $cyan;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: -2px;
-    right: -2px;
-    left: -2px;
-    bottom: -2px;
   }
 }
 

@@ -516,3 +516,22 @@ a.page-header__scroll {
     display: none;
   }
 }
+
+.page-header--form {
+  background: url("../img/main-background-desktop@1x.jpg") center center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+
+  @media (min-resolution: $retina-dppx) {
+    background: url("../img/main-background-desktop@2x.jpg") center center no-repeat;
+  }
+}
+
+.page-header--form .popup {
+  display: block;
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    left: 0;
+  }
+}
